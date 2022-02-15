@@ -10,7 +10,6 @@ import { CITIES } from '../cities'
 export class NavbarComponent implements OnInit {
 
   cities: any = [];
-  // citiesList: any[] = [this.cities[0].name, 'London', 'Gibraltar','Sydney', 'Seattle'];
   citiesList: any[] = ['San Franciso', 'London', 'Gibraltar','Sydney', 'Seattle'];
 
   constructor(private route: ActivatedRoute, private router: Router) { }
