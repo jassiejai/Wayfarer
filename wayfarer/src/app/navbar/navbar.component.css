@@ -6,3 +6,7 @@
 .mat-button {
     color: white;
 }
+.title {
+    font-weight: bold;
+    font-size: 40px;
+}

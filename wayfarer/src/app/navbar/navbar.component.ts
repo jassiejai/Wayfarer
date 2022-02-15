@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  citiesList: any[] = ['London', 'Sydney', 'San Franciso', 'Seattle'];
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
+  onChange(event: any){
+    console.log(event.value);
+  }
 }
