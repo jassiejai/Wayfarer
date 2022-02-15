@@ -32,6 +32,10 @@ body {
     justify-content: center;
 }
 
+.city-image img {
+    height: 600px;
+}
+
 .post-image {
     border: 1px solid #ddd;
     border-radius: 4px;
