@@ -2,7 +2,7 @@ export const CITIES = [
     {
        id: 1,
        name: "San Francisco",
-       img: "",
+       img: "assets/img/san-francisco/san-francisco1-pexels-pixabay-208745.jpg",
        posts: [{
         title: "Title 1",
         author: "Author 1",
@@ -19,7 +19,7 @@ export const CITIES = [
       {
        id: 2,
        name: "London",
-       img: "",
+       img: "assets/img/london/london1-pexels-chris-schippers-427679.jpg",
        posts: [{
         title: "Title 1",
         author: "Author 1",
@@ -30,7 +30,7 @@ export const CITIES = [
       {
        id: 3,
        name: "Gibraltar",
-       img: "",
+       img: "assets/img/gibraltar/gibraltar1-pexels-anna-urlapova-2968743.jpg",
        posts: [{
         title: "Title 1",
         author: "Author 1",
