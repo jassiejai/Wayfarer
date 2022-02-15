@@ -1,4 +1,61 @@
-.cities{
+/* .cities{
     list-style-type: none; 
 
+} */
+body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
+.city-info {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+.city-name {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+}
+.city-weather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-image {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+}
+
+.post {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    height: 120px;
+    justify-content:center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    
+}
+.post-info {
+    max-height: 120px;
+    text-align: left;
+    padding: 10px;
+}
+
