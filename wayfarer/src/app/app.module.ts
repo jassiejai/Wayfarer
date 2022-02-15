@@ -7,7 +7,11 @@ import { CitiesComponent } from './cities/cities.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+<<<<<<< HEAD
 import { MatSelectModule } from '@angular/material/select';
+=======
+import {MatSelectModule} from '@angular/material/select';
+>>>>>>> 064f653a13a4dfd5295c8ab6bfa7ae2012430095
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
