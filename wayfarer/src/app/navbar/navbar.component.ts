@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CITIES } from '../cities'
 
 @Component({
   selector: 'app-navbar',
@@ -7,11 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  citiesList: any[] = ['London', 'Sydney', 'San Franciso', 'Seattle'];
+  cities: any = [];
+  // citiesList: any[] = [this.cities[0].name, 'London', 'Gibraltar','Sydney', 'Seattle'];
+  citiesList: any[] = ['San Franciso', 'London', 'Gibraltar','Sydney', 'Seattle'];
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      this.cities = CITIES.find( (city: { id: number; }) => {
+        let paramId: string = params.get('id') || '';
+        return city.id === parseInt(paramId);
+      })
+    })
   }
 
 
