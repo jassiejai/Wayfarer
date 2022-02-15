@@ -1,8 +1,8 @@
 export const CITIES = [
     {
-       id: 1,
+       id: 0,
        name: "San Francisco",
-       img: "assets/img/san-francisco/san-francisco1-pexels-pixabay-208745.jpg",
+       img: "../assets/img/san-francisco/san-francisco1-pexels-pixabay-208745.jpg",
        posts: [{
         title: "Title 1",
         author: "Author 1",
@@ -17,9 +17,9 @@ export const CITIES = [
         }]
       },
       {
-       id: 2,
+       id: 1,
        name: "London",
-       img: "assets/img/london/london1-pexels-chris-schippers-427679.jpg",
+       img: "../assets/img/london/london1-pexels-chris-schippers-427679.jpg",
        posts: [{
         title: "Title 1",
         author: "Author 1",
@@ -28,14 +28,36 @@ export const CITIES = [
         }]  
       },
       {
-       id: 3,
+       id: 2,
        name: "Gibraltar",
-       img: "assets/img/gibraltar/gibraltar1-pexels-anna-urlapova-2968743.jpg",
+       img: "../assets/img/gibraltar/gibraltar1-pexels-anna-urlapova-2968743.jpg",
        posts: [{
         title: "Title 1",
         author: "Author 1",
         date: "01/01/2022",
         body: "Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi."
         }]  
-      }
+      },
+      {
+        id: 3,
+        name: "Sydney",
+        img: "../assets/img/gibraltar/gibraltar1-pexels-anna-urlapova-2968743.jpg",
+        posts: [{
+         title: "Title 1",
+         author: "Author 1",
+         date: "01/01/2022",
+         body: "Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi."
+         }]  
+       },
+       {
+        id: 4,
+        name: "Seattle",
+        img: "../assets/img/gibraltar/gibraltar1-pexels-anna-urlapova-2968743.jpg",
+        posts: [{
+         title: "Title 1",
+         author: "Author 1",
+         date: "01/01/2022",
+         body: "Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi."
+         }]  
+       }
    ] 
