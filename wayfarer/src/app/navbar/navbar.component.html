@@ -1,16 +1,23 @@
 <mat-toolbar color="primary">
  
-     <div class="spacer"></div>
+     <div></div>
        <a class="title" mat-button routerLink="/">Wayfarer</a>
        <div style="margin:5%;">
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill" >
                 <mat-label>Cities</mat-label>
-                <!-- <a mat-button routerLink="/Cities">Cities</a> -->
+                <!-- <a *ngFor="let city of cities" routerLink="/Cities/{{city.id}}">{{city.name}}</a> -->
                 <mat-select (selectionChange)="onChange($event)" >
-                    <mat-option *ngFor="let city of citiesList;let i = index;" [value]="i">{{city}}</mat-option>
+                    <mat-option *ngFor="let city of citiesList;let i = index;" [value]="i +1">{{city}}</mat-option>
                     <!-- <a routerLink="/cities/{{" -->
-
-                  </mat-select>
+                    <p *ngFor="let city of cities">Test{{city.id}}</p>
+                </mat-select>
+   
             </mat-form-field>
+          
+            <!-- <div class="spacer"> </div> -->
+             <!-- <app-search></app-search> -->
+           
        </div>
-   </mat-toolbar>
+       <div class="spacer"> </div>
+       <input type="text" matInput placeholder="Search">
+</mat-toolbar>

@@ -9,7 +9,7 @@ import { CITIES } from '../cities'
 })
 export class NavbarComponent implements OnInit {
 
-  cities: any = [];
+  cities: any;
   // citiesList: any[] = [this.cities[0].name, 'London', 'Gibraltar','Sydney', 'Seattle'];
   citiesList: any[] = ['San Franciso', 'London', 'Gibraltar','Sydney', 'Seattle'];
 
@@ -27,5 +27,6 @@ export class NavbarComponent implements OnInit {
 
   onChange(event: any){
     console.log(event.value);
+    console.log(this.cities[event.value]);
   }
 }

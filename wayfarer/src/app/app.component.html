@@ -1,6 +1,14 @@
 <app-navbar></app-navbar>
 <app-cities></app-cities>
 
+<li>Cities
+    <ul>
+        <li *ngFor="let city of cities">
+            <a routerLink="/cities/{{city.id}}">{{city.name}}</a>
+        </li>
+    </ul>
+</li>
+    
 <!-- <nav class="nav">
 <li>Wayfarer</li>
 <li>Cities</li>
