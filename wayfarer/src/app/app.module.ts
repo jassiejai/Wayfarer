@@ -11,6 +11,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
+import { SliderComponent } from './slider/slider.component';
+// import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel'; // For future use for front page carousel
+
 
 
 @NgModule({
@@ -19,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     CitiesComponent,
     NavbarComponent,
     SearchComponent,
-    
+    SliderComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatSelectModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
