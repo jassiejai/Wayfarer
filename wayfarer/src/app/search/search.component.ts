@@ -10,7 +10,8 @@ export class SearchComponent implements OnInit {
  
   city: string = '';
 //TODO: Add search logic 
-  constructor() { }
+    public searchText: string = '';
+    dataset = ['MDB', 'Angular', 'Bootstrap', 'Framework', 'SPA', 'React', 'Vue'];
 
   ngOnInit(): void {
   }
