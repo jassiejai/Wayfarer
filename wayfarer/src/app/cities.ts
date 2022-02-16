@@ -2,7 +2,8 @@ export const CITIES = [
     {
        id: 1,
        name: "San Francisco",
-       country: "USA",
+       country: "United Stated of America",
+       code: "USA",
        img: "../assets/img/san-francisco/san-francisco1-pexels-pixabay-208745.jpg",
        posts: [{
         title: "Title 1",
@@ -20,7 +21,8 @@ export const CITIES = [
       {
        id: 2,
        name: "London",
-       country: "UK",
+       country: "United Kingdom",
+       code: "UK",
        img: "../assets/img/london/london1-pexels-chris-schippers-427679.jpg",
        posts: [{
         title: "Title 1",
@@ -32,8 +34,9 @@ export const CITIES = [
       {
        id: 3,
        name: "Gibraltar",
-       country: "UK",
-       img: "../assets/img/gibraltar/gibraltar1-pexels-anna-urlapova-2968743.jpg",
+       country: "United Kingdom",
+       code: "UK",
+       img: "../assets/img/gibraltar/ryan-favinger-W6036AvJ8tk-unsplash.jpg",
        posts: [{
         title: "Title 1",
         author: "Author 1",
@@ -45,7 +48,8 @@ export const CITIES = [
         id: 4,
         name: "Sydney",
         country: "Australia",
-        img: "../assets/img/gibraltar/gibraltar1-pexels-anna-urlapova-2968743.jpg",
+        code: "AU",
+        img: "../assets/img/sydney/dan-freeman-7Zb7kUyQg1E-unsplash.jpg",
         posts: [{
          title: "Title 1",
          author: "Author 1",
@@ -56,8 +60,9 @@ export const CITIES = [
        {
         id: 5,
         name: "Seattle",
-        country: "USA",
-        img: "../assets/img/gibraltar/gibraltar1-pexels-anna-urlapova-2968743.jpg",
+        country: "United Stated of America",
+        code: "USA",
+        img: "../assets/img/seattle/thom-milkovic-skUTVJi8-jc-unsplash.jpg",
         posts: [{
          title: "Title 1",
          author: "Author 1",
