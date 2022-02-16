@@ -2,6 +2,7 @@ export const CITIES = [
     {
        id: 1,
        name: "San Francisco",
+       country: "USA",
        img: "../assets/img/san-francisco/san-francisco1-pexels-pixabay-208745.jpg",
        posts: [{
         title: "Title 1",
@@ -19,6 +20,7 @@ export const CITIES = [
       {
        id: 2,
        name: "London",
+       country: "UK",
        img: "../assets/img/london/london1-pexels-chris-schippers-427679.jpg",
        posts: [{
         title: "Title 1",
@@ -30,6 +32,7 @@ export const CITIES = [
       {
        id: 3,
        name: "Gibraltar",
+       country: "UK",
        img: "../assets/img/gibraltar/gibraltar1-pexels-anna-urlapova-2968743.jpg",
        posts: [{
         title: "Title 1",
@@ -41,6 +44,7 @@ export const CITIES = [
       {
         id: 4,
         name: "Sydney",
+        country: "Australia",
         img: "../assets/img/gibraltar/gibraltar1-pexels-anna-urlapova-2968743.jpg",
         posts: [{
          title: "Title 1",
@@ -52,6 +56,7 @@ export const CITIES = [
        {
         id: 5,
         name: "Seattle",
+        country: "USA",
         img: "../assets/img/gibraltar/gibraltar1-pexels-anna-urlapova-2968743.jpg",
         posts: [{
          title: "Title 1",
