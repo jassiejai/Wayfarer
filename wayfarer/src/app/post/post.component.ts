@@ -16,15 +16,19 @@ export class PostComponent implements OnInit {
   constructor(private route: AppRoutingModule) { }
 
   ngOnInit(): void {
-    this.routes.paramMap.subscribe(param => {
+    this.route.param.subscribe(param => {
 
-      this.city = city;
+      let postId = parseInt(param.get('post'), 15)
+
+      // this.city = CITIES.find(city =>{
+      //   return city.id == parseInt(param.get('id'), 15);
+      // });
+
       this.post = this.city.posts[postId];
+    });
 
+    console.log(this.city, this.post)
 
-
-
-    })
   }
 
 }

@@ -9,14 +9,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { PostComponent } from './post/post.component';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CitiesComponent,
     NavbarComponent,
-    // PostComponent,
+    PostComponent,
     
   ],
   imports: [
