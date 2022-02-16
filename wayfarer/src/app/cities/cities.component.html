@@ -2,17 +2,18 @@
     <div class="city-info">
         <div class="city-name">
             <h1>{{city.name}}</h1>
-            <h3>{{city.country}}</h3>
+            <p>{{city.country}}</p>
         </div>
         <div class="city-image">
             <img src={{city.img}} alt="image">
         </div>
         <div class="city-weather">
             <h2>Weather</h2>
-            <!-- <h3>{{weather.weather[0].description}}</h3> -->
-            <h3>30.0F</h3>
-            <p>Min:20.0F, Max: 40.0F</p>
-            <!-- <p>Min:{{weather.main.temp_min}}, Max: {{weather.main.temp_max}}</p> -->
+            <h3>{{weather.weather[0].description}}</h3>
+            <h4>{{weather.main.temp}} F</h4>
+            <!-- <h3>30.0F</h3> -->
+            <!-- <p>Min:20.0F, Max: 40.0F</p> -->
+            <p>Max: {{weather.main.temp_max}} F  Min: {{weather.main.temp_min}} F</p>
         </div>
     </div>
     <div class="city-posts">

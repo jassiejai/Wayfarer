@@ -36,6 +36,11 @@ body {
     justify-content: center;
     padding-left: 5%;
     padding-right: 5%;
+    text-align: center;
+}
+
+.city-weather p {
+    font-size:x-small;
 }
 
 .city-image img {
