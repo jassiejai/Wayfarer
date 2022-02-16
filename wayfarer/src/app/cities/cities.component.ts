@@ -1,4 +1,3 @@
-import { createInjectorType } from '@angular/compiler/src/render3/r3_injector_compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CITIES } from '../cities';
@@ -10,7 +9,6 @@ import { CITIES } from '../cities';
 export class CitiesComponent implements OnInit {
 
   city: any;
-  // posts: any;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -20,7 +18,6 @@ export class CitiesComponent implements OnInit {
         let paramId: string = params.get('id') || '';
         return city.id === parseInt(paramId);
       })
-      console.log(this.city.name)
     })
   }
 

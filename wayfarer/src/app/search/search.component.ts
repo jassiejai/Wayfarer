@@ -9,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class SearchComponent implements OnInit {
  
   city: string = '';
+
+  public searchText: string = '';
 //TODO: Add search logic 
+dataset = ['MDB', 'Angular', 'Bootstrap', 'Framework', 'SPA', 'React', 'Vue'];
   constructor() { }
 
   ngOnInit(): void {
