@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CITIES } from '../cities'
 
 @Component({
@@ -10,10 +10,9 @@ import { CITIES } from '../cities'
 export class NavbarComponent implements OnInit {
 
   cities: any = [];
-  // citiesList: any[] = [this.cities[0].name, 'London', 'Gibraltar','Sydney', 'Seattle'];
   citiesList: any[] = ['San Franciso', 'London', 'Gibraltar','Sydney', 'Seattle'];
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -27,5 +26,6 @@ export class NavbarComponent implements OnInit {
 
   onChange(event: any){
     console.log(event.value);
+    this.router.navigate(['cities/',event.value]);
   }
 }
