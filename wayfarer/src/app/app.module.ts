@@ -13,6 +13,7 @@ import { PostComponent } from './post/post.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { SliderComponent } from './slider/slider.component';
+import { HttpClientModule } from '@angular/common/http';
 // import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel'; // For future use for front page carousel
 
 
@@ -34,6 +35,7 @@ import { SliderComponent } from './slider/slider.component';
     MatSelectModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule
 
   ],
   providers: [],
