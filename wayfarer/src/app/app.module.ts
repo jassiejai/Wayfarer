@@ -13,6 +13,7 @@ import { PostComponent } from './post/post.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { SliderComponent } from './slider/slider.component';
+import { FilterPipe } from './filter.pipe';
 // import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel'; // For future use for front page carousel
 
 
@@ -25,6 +26,7 @@ import { SliderComponent } from './slider/slider.component';
     PostComponent,
     SearchComponent,
     SliderComponent,
+    FilterPipe,
 
   ],
   imports: [
