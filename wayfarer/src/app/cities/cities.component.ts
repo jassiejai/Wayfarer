@@ -18,6 +18,7 @@ export class CitiesComponent implements OnInit {
         let paramId: string = params.get('id') || '';
         return city.id === parseInt(paramId);
       })
+      console.log(this.city.name)
     })
   }
 
