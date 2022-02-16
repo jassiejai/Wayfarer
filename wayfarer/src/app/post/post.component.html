@@ -1,8 +1,15 @@
 <p>post works!</p>
 
-<!-- <section *ngFor="let i of cities">
 
- <p>This is the Post {{cities.id}}</p>   
-</section> -->
+
+<section *ngFor="let city of cities">
+   <section *ngFor="let post of posts">
+    
+ <p>This is the Post {{city| json}}</p>   
+ <p>This is the Post {{city[city].post}}</p>   
+  <!-- <p>This is the Post {{city.posts}}</p>    -->
+</section>
+</section>
+
 
 <p>This is the Post {{test}}</p>   

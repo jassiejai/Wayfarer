@@ -7,11 +7,11 @@ const routes: Routes = [
   {path: 'cities/:id', 
   component: CitiesComponent,
   // children : [
-  //   // {
-  //   //   path: ':id/posts/:postId',
-  //   //   component: PostComponent
+  //   {
+  //     path: 'cities/:id/posts/:postId',
+  //     component: PostComponent
 
-  //   // }
+  //   }
   // ]
 }
 ];

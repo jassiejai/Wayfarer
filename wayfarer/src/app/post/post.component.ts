@@ -11,22 +11,29 @@ export class PostComponent implements OnInit {
 
   cities : any = CITIES;
   city: any;
-  post: any;
+  posts: any;
 
   test : string ="miami";
 
 
   constructor( private route: ActivatedRoute) { }
 
+  findpost(){
+    
+  }
   ngOnInit(): void {
 
-    this.route.paramMap.subscribe(params => {
-      this.city = CITIES.find(city => {
-        let paramId: string = params.get('id') || '';
-        return city.id === parseInt(paramId);})
 
-        console.log(this.city.name)
-      }) }
+
+    // this.route.paramMap.subscribe(params => {
+    //   this.city = CITIES.find(city => {
+    //     let paramId: string = params.get('id') || '';
+    //     return city.id === parseInt(paramId);})
+
+
+        console.log(this.cities[0].posts[0])
+      // })
+     }
     //   this.route.paramMap.subscribe(param => {
   
     //     // const postId = parseInt(param'postId')
