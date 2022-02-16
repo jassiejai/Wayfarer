@@ -1,15 +1,18 @@
 <p>post works!</p>
 
+<p>{{post.title}}</p>
+<p>{{post.author}}</p>
+<p>{{post.date}}</p>
+<p>{{post.body}}</p>
+<!-- instead of having an array you are pulling from another componet -->
 
-
-<section *ngFor="let city of cities">
-   <section *ngFor="let post of posts">
-    
- <p>This is the Post {{city| json}}</p>   
- <p>This is the Post {{city[city].post}}</p>   
-  <!-- <p>This is the Post {{city.posts}}</p>    -->
-</section>
-</section>
-
-
-<p>This is the Post {{test}}</p>   
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk of the
+        card's content.
+      </p>
+      <button type="button" class="btn btn-primary">Button</button>
+    </div>
+  </div>
