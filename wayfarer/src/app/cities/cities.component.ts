@@ -1,6 +1,7 @@
 import { createInjectorType } from '@angular/compiler/src/render3/r3_injector_compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { distinctUntilChanged, Subject } from 'rxjs';
 import { CITIES } from '../cities';
 import { CitiesService } from './cities.service';
 @Component({
@@ -11,6 +12,7 @@ import { CitiesService } from './cities.service';
 export class CitiesComponent implements OnInit {
 
   city: any;
+  weather: any;
   // posts: any;
 
   constructor(private route: ActivatedRoute, private citiesService : CitiesService) { }
@@ -23,9 +25,14 @@ export class CitiesComponent implements OnInit {
 
       this.city = CITIES.find(city => {
         let paramId: string = params.get('id') || '';
+        this.citiesService.createAPIObservable(city.name)
+        .subscribe(response => {
+          console.log(city.name)
+          console.log(response);
+          this.weather = response;
+        })
         return city.id === parseInt(paramId);
       })
     })
   }
-
 }
