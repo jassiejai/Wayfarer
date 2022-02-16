@@ -5,5 +5,15 @@ import { Injectable } from '@angular/core';
 })
 export class CitiesService {
 
+  cityId : string = "";
+
   constructor() { }
+
+  sendCityId( id: string){
+
+    this.cityId = id;
+  }
+  getCityId() {
+    return this.cityId;
+  }
 }
