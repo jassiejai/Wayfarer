@@ -5,11 +5,17 @@ import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
   {path: 'cities/:id', 
-  component: CitiesComponent,
+  // component: CitiesComponent,
   children : [
     {
       path: 'post/:postId',
       component: PostComponent
+
+    },
+    {
+      path: '',
+      pathMatch: 'full',
+      component: CitiesComponent
 
     }
   ]

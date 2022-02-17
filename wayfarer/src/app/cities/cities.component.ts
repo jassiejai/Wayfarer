@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 import { CITIES } from '../cities';
 import { CitiesService } from './cities.service';
 @Component({
@@ -15,6 +16,11 @@ export class CitiesComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private citiesService : CitiesService) { }
 
+  get sortPosts(){
+        return this.city.posts.sort((a:any,b:any) => {
+          return <any>new Date(b.date) - <any>new Date(a.date);
+        });
+      }
   ngOnInit(): void {
  
     
