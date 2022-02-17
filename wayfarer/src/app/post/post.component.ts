@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CITIES } from '../cities';
 import { ActivatedRoute } from '@angular/router';
 import { CitiesService } from '../cities/cities.service';
-import { toArray } from 'rxjs';
 
 @Component({
   selector: 'app-post',
@@ -23,8 +22,10 @@ export class PostComponent implements OnInit {
     console.log("this is a test");
     this.route.paramMap.subscribe(params => {
       const postId = parseInt(params.get('postId') || '');
+      
 
       console.log(postId);
+
       this.city = CITIES.find( c => {
 
         let paramId :string = this.citiesService.getCityId();
@@ -35,10 +36,14 @@ export class PostComponent implements OnInit {
       })
 
       let postArray: any[] = this.city.posts;
-      console.log(postArray);
+      // console.log(postArray);
       this.post = postArray.find( p => {
-     return p.id === postId;
-   } )
+  
+     
+      console.log(p);
+      return p.id === postId;
+   } 
+   )
     }) 
     console.log(this.city)
     console.log(this.post);
