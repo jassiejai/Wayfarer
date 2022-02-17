@@ -23,13 +23,13 @@
                 <div class="post-info">
                     <!-- if statement to print the specific post infromation -->
                     <a routerLink="post/{{i.id}}">
-                        <h2>{{city.posts[j].title}}</h2>
+                        <h2>{{i.title}}</h2>
                     </a>
                     <p>
-                        {{city.posts[j].body}}
-                        <!-- <app-post></app-post> -->
+                        {{i.body}} <!-- showing only post works in when called not showing other information-->
+                    <!-- <app-post></app-post> -->
                     </p>
-                    <!-- <router-outlet></router-outlet> -->
+                    
                 </div>
             </div>
     </div>
