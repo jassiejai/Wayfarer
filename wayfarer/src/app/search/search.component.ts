@@ -13,7 +13,7 @@ export class SearchComponent implements OnInit {
   cities: any;
 //TODO: Add search logic 
     public searchText: string = '';
-    dataset = ['MDB', 'Angular', 'Bootstrap', 'Framework', 'SPA', 'React', 'Vue'];
+    // dataset = ['MDB', 'Angular', 'Bootstrap', 'Framework', 'SPA', 'React', 'Vue'];
 
     constructor(private route: ActivatedRoute, private router: Router) { console.log(this.cityList[0].name)}
   

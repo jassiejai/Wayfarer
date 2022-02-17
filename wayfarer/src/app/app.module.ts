@@ -14,6 +14,7 @@ import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { SliderComponent } from './slider/slider.component';
 import { FilterPipe } from './filter.pipe';
+import { HttpClientModule } from '@angular/common/http';
 // import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel'; // For future use for front page carousel
 
 
@@ -36,6 +37,7 @@ import { FilterPipe } from './filter.pipe';
     MatSelectModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule
 
   ],
   providers: [],
