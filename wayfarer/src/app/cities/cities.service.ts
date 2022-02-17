@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class CitiesService {
 
   cityId : string = "";
+  postId : string = "";
 
   constructor() { }
 
@@ -15,5 +16,13 @@ export class CitiesService {
   }
   getCityId() {
     return this.cityId;
+  }
+  // create setter and getter for post id
+  sendPostId(pId : string){
+    this.postId = pId;
+  
+  }
+  getPostId(){
+    return this.postId;
   }
 }

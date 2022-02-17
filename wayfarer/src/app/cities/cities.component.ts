@@ -3,16 +3,26 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CITIES } from '../cities';
 import { CitiesService } from './cities.service';
+
+
 @Component({
   selector: 'app-cities',
   templateUrl: './cities.component.html',
   styleUrls: ['./cities.component.css']
 })
 export class CitiesComponent implements OnInit {
+  
 
   city: any;
   // posts: any;
 
+  findPost(){
+   // pulling the ids for the post 
+      // let postId :string = this.citiesService.getPostId();
+
+      // console.log(postId)
+      console.log("its been ran")
+  }
   constructor(private route: ActivatedRoute, private citiesService : CitiesService) { }
 
   ngOnInit(): void {
@@ -20,6 +30,7 @@ export class CitiesComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
 
       this.citiesService.sendCityId(params.get('id') || '');
+
 
       this.city = CITIES.find(city => {
         let paramId: string = params.get('id') || '';
