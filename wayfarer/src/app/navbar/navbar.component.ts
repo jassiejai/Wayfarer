@@ -11,8 +11,9 @@ import { ElementRef } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  //TODO: Clean up file, remove any test console logs
   cities: any = {};
-  citiesList: any[] = ['San Franciso', 'London', 'Gibraltar','Sydney', 'Seattle'];
+  citiesList: any[] = ['San Francisco', 'London', 'Gibraltar','Sydney', 'Seattle']; // This array populates the names of the cities in the dropdown list
 
   constructor(private route: ActivatedRoute, private router: Router, private el:ElementRef) { }
 
