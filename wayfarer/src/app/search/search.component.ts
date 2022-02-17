@@ -15,7 +15,8 @@ export class SearchComponent implements OnInit {
   // matchingPosts: any = [];
   // cities: any;
   posts: any;
-
+//TODO: See if the search can work with the cities array. 
+//TODO: Clean up this file.
 
     public searchText: string = '';
     // dataset = ['MDB', 'Angular', 'Bootstrap', 'Framework', 'SPA', 'React', 'Vue'];
@@ -45,8 +46,6 @@ export class SearchComponent implements OnInit {
         this.router.navigate(['cities/',this.postList[i].cityId,'post',this.postList[i].id]);
       }
     }
-
-    // this.router.navigate(['cities/',event.value]);
   }
   // Clears search bar after a selection is made
   clearSearch() {
