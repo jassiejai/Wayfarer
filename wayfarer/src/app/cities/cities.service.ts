@@ -12,9 +12,10 @@ export class CitiesService {
 
   constructor(private http: HttpClient) { }
 
-  createAPIObservable(cityName: string, countryCode:string){
+  createAPIObservable(cityName: string, countryCode: string){
     return this.http
     .get(`http://api.openweathermap.org/data/2.5/weather?q=${cityName},${countryCode}&appid=052f26926ae9784c2d677ca7bc5dec98&&units=imperial`)
+  
   }
 
   sendCityId( id: string){
@@ -23,14 +24,6 @@ export class CitiesService {
 
   getCityId() {
     return this.cityId;
-  }
-
-  sendCityName(name: string){
-    this.cityName = name;
-  }
-
-  sendCountryCode(code : string){
-    this.countryCode = code;
   }
 
 }
