@@ -11,4 +11,8 @@ export class AppComponent {
   title = 'wayfarer';
   cities = CITIES;
   posts = POSTS;
+  
+  getCities(){
+    return this.cities;
+  }
 }
