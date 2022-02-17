@@ -54,9 +54,9 @@ export class SearchComponent implements OnInit {
     // this.router.navigate(['cities/',event.value]);
   }
 
-  // clearSearch() {
-  //   this.searchText = '';
-  // }
+  clearSearch() {
+    this.searchText = '';
+  }
 //   findPost(search: string){
 //     this.matchingPosts = [];
 //     //console.log(search);
