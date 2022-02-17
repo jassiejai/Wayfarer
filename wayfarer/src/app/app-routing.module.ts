@@ -13,10 +13,7 @@ const routes: Routes = [
 
     }
   ]
-},
-// {path: 'cities/:id/post/:postId',
-// component: PostComponent
-// }
+}
 ];
 
 @NgModule({
