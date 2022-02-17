@@ -9,6 +9,5 @@ import { CITIES } from './cities'
 export class AppComponent {
   title = 'wayfarer';
   cities = CITIES;
-
   
 }

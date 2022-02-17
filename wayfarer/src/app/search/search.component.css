@@ -1,0 +1,7 @@
+.mat-option {
+    background-color:white;
+}
+
+.mat-option:hover{
+    background-color:whitesmoke;
+}

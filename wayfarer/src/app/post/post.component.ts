@@ -11,9 +11,9 @@ import { toArray } from 'rxjs';
 })
 export class PostComponent implements OnInit {
 
-  cities : any = CITIES;
-  city: any;
-  post: any;
+  // cities : any = CITIES;
+  city: any = 0;
+  post: any = 0;
 
 
   constructor( private route: ActivatedRoute, private citiesService: CitiesService) { }
