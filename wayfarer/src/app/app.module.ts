@@ -13,10 +13,13 @@ import { PostComponent } from './post/post.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { SliderComponent } from './slider/slider.component';
+// import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
+
 import { FilterPipe } from './filter.pipe';
 import { HttpClientModule } from '@angular/common/http';
 // import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel'; // For future use for front page carousel
 // import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
+
 
 
 
@@ -38,8 +41,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatSelectModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule,
-    // MdbCheckboxModule
+    // MdbCollapseModule,
+    HttpClientModule
 
   ],
   providers: [],
