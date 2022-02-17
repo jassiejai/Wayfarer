@@ -26,9 +26,6 @@ export class NavbarComponent implements OnInit {
 
 
   onChange(event: any){
-    console.log(event.value);
-    this.citiesService.sendCityName(CITIES[event.value-1].name);
-    this.citiesService.sendCountryCode(CITIES[event.value-1].code);
     this.router.navigate(['cities/',event.value]);
   }
 }

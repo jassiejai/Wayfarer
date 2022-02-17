@@ -17,18 +17,24 @@ export class CitiesComponent implements OnInit {
 
   ngOnInit(): void {
  
+    
     this.route.paramMap.subscribe(params => {
 
       this.citiesService.sendCityId(params.get('id') || '');
+      // this.citiesService.createAPIObservable();
+      // this.citiesService.loadForecastWeather();
 
       this.city = CITIES.find(city => {
         let paramId: string = params.get('id') || '';
-        this.citiesService.createAPIObservable(city.name, city.code)
-        .subscribe(response => {
+        if(city.id===parseInt(paramId)){
+          this.citiesService.createAPIObservable(city.name, city.code)
+          .subscribe(response => {
           console.log(city.name);
           console.log(response);
           this.weather = response;
-        })
+          })
+        }
+        
         return city.id === parseInt(paramId);
       })
     })
