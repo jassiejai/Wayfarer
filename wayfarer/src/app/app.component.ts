@@ -10,4 +10,7 @@ export class AppComponent {
   title = 'wayfarer';
   cities = CITIES;
   
+  getCities(){
+    return this.cities;
+  }
 }
