@@ -25,5 +25,9 @@ export class SearchComponent implements OnInit {
       }); 
     })
   }
+  onChange(event: any){
+    console.log(event.value);
+    this.router.navigate(['cities/',event.value]);
+  }
 
 }
