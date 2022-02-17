@@ -5,19 +5,20 @@ import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
   {path: 'cities/:id', 
-  // component: CitiesComponent,
+  component: CitiesComponent, // backup option: comment this out 
   children : [
+    // { ///uncomment this for the backup option
+    //   path: '',
+    //   pathMatch: 'full',
+    //   component: CitiesComponent
+
+    // },
     {
       path: 'post/:postId',
       component: PostComponent
 
-    },
-    {
-      path: '',
-      pathMatch: 'full',
-      component: CitiesComponent
-
     }
+    
   ]
 }
 ];
