@@ -1,7 +1,9 @@
 <div class="md-form">
-    <input type="search" [(ngModel)]="searchText" placeholder="Search text">
+    <input type="search" [(ngModel)]="searchText" placeholder="Search">
     <div *ngIf="searchText != ''">
-        <mat-option *ngFor="let data of cityList | filter: searchText " >{{data.name}}</mat-option>
+
+        <mat-option *ngFor="let data of cityList | filter: searchText" >{{data}}</mat-option>
+
     </div>
   </div>
   <!-- <ul *ngFor="let data of dataset | filter: searchText">
