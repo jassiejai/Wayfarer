@@ -16,6 +16,7 @@ import { SliderComponent } from './slider/slider.component';
 import { FilterPipe } from './filter.pipe';
 import { HttpClientModule } from '@angular/common/http';
 // import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel'; // For future use for front page carousel
+// import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
 
 
 
@@ -37,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatSelectModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    // MdbCheckboxModule
 
   ],
   providers: [],

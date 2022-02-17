@@ -15,6 +15,24 @@ const routes: Routes = [
   ]
 }
 ];
+// const routes: Routes = [
+//   {path: 'cities/:id', 
+//   // component: CitiesComponent,
+//   children : [
+//     {
+//       path: 'post/:postId',
+//       component: PostComponent
+
+//     },
+//     {
+//       path: '',
+//       pathMatch: 'full',
+//       component: CitiesComponent
+
+//     }
+//   ]
+// }
+// ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

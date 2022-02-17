@@ -14,6 +14,7 @@ export class SearchComponent implements OnInit {
   cityPosts: any = this.cityList.posts;
   // matchingPosts: any = [];
   cities: any;
+  posts: any;
 
 //TODO: Add search logic
     public searchText: string = '';
@@ -23,16 +24,33 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     // this.findPost("title 1");
+    // this.route.paramMap.subscribe(params => {
+    //   this.cities = CITIES.find( (city: { id: number; }) => {
+    //     let paramId: string = params.get('id') || '';
+    //     return city.id === parseInt(paramId);
+    //   });
+    // })
     this.route.paramMap.subscribe(params => {
-      this.cities = CITIES.find( (city: { id: number; }) => {
-        let paramId: string = params.get('id') || '';
-        return city.id === parseInt(paramId);
+      this.posts = POSTS.find((post: { title: string | null; }) => {
+        let paramTitle: string = params.get('title') || '';
+        console.log(paramTitle);
+        return post.title === paramTitle;
       });
     })
   }
   onChange(event: any){
     console.log(event.originalTarget.innerHTML);
-    
+    console.log(this.postList)
+    for (let i = 0; i < this.postList.length; i++) {
+      if (event.originalTarget.innerHTML==this.postList[i].title){
+        console.log("match");
+        console.log(this.postList[i].id);
+        console.log(this.postList[i].cityId);
+        console.log(this.postList[i].date);
+        this.router.navigate(['cities/',this.postList[i].cityId,'post',this.postList[i].id]);
+      }
+    }
+
     // this.router.navigate(['cities/',event.value]);
   }
 //   findPost(search: string){

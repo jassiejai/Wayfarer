@@ -11,7 +11,7 @@ import { CitiesService } from '../cities/cities.service';
 export class NavbarComponent implements OnInit {
 
   cities: any = {};
-  citiesList: any[] = ['San Franciso', 'London', 'Gibraltar','Sydney', 'Seattle'];
+  citiesList: any[] = ['San Francisco', 'London', 'Gibraltar','Sydney', 'Seattle'];
 
   constructor(private route: ActivatedRoute, private router: Router, private citiesService : CitiesService) { }
 

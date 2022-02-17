@@ -1,15 +1,12 @@
 <div class="md-form">
     <input type="search" [(ngModel)]="searchText" placeholder="Search">
-    <div *ngIf="searchText != ''">
+    <!-- <div *ngIf="searchText != ''"> -->
         <!-- <mat-select (selectionChange)="onChange($event)" > -->
-            <mat-option *ngFor="let data of cityList | filter: searchText" >{{data}}</mat-option>
-            <!-- <mat-option *ngFor="let data of cityList; let i = index" >{{data.name}}</mat-option> -->
+           
+               <mat-option *ngFor="let data of postList | filter: searchText; index as i" (click)="onChange($event)">{{data}}</mat-option>
+          
         <!-- </mat-select> -->
-    </div>
+    <!-- </div> -->
   </div>
-  <!-- <ul *ngFor="let data of dataset | filter: searchText">
-    <li *ngIf="searchText != ''">{{data}}</li>
-   
-  </ul>
-   -->
-  
+
+

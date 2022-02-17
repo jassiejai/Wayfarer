@@ -1,19 +1,21 @@
 <mat-toolbar color="primary">
- 
+
      <div></div>
        <a class="title" mat-button routerLink="/">Wayfarer</a>
        <div style="margin:5%;">
             <mat-form-field appearance="fill" >
                 <mat-label>Cities</mat-label>
                 <mat-select (selectionChange)="onChange($event)" >
-                    <mat-option *ngFor="let city of citiesList;let i = index;" [value]="i +1">{{city}}</mat-option>
+                    <mat-option *ngFor="let city of citiesList;let i = index;" [value]="i +1">
+                      {{city}}
+                    </mat-option>
                 </mat-select>
-   
+
             </mat-form-field>
-          
-           
+
+
        </div>
-    
+
        <div class="spacer"> </div>
        <div class="searchbar">
             <app-search></app-search>
