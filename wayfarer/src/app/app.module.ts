@@ -13,9 +13,11 @@ import { PostComponent } from './post/post.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { SliderComponent } from './slider/slider.component';
-// import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel'; 
-// For future use for front page carousel
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
+
+import { FilterPipe } from './filter.pipe';
+import { HttpClientModule } from '@angular/common/http';
+// import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel'; // For future use for front page carousel
 
 
 
@@ -28,6 +30,7 @@ import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
     PostComponent,
     SearchComponent,
     SliderComponent,
+    FilterPipe,
 
   ],
   imports: [
@@ -37,7 +40,8 @@ import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
     MatSelectModule,
     BrowserAnimationsModule,
     FormsModule,
-    MdbCollapseModule
+    MdbCollapseModule,
+    HttpClientModule
 
   ],
   providers: [],
