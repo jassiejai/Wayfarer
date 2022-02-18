@@ -1,18 +1,21 @@
 <h1>Create a post</h1>
 
-<form class="post" [formGroup]="form">
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
     <!-- #postForm="ngForm"> -->
-      {{form.value | json}}
+      <!-- {{form.value | json}} -->
       <hr />
       <!-- <h1>{{date}}</h1> -->
     
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
-        <input  formControlName="title" type="text" class="form-control" id="title" placeholder="Title">
-      </div>
+        <input  formControlName="title" type="text" class="form-control" [ngClass]="{ 'is-invalid': clickedIt && inf['title'].errors }">
+        <div *ngIf="clickedIt && inf['title'].errors" class="invalid-feedback">
+        <div *ngIf="inf['title'].errors['required']">Title Required</div>
+    </div>
+    </div>
       <div class="mb-3">
         <label for="author" class="form-label">Author</label>
-        <input  formControlName="author" type="text" id="author" placeholder="Author">
+        <input  formControlName="author" type="text" id="author" placeholder="Author" [ngClass]="{ 'is-invalid': clickedIt && inf['title'].errors }">
       </div>
       <div class="mb-3">
         <label  for="date" class="form-label">{{date}}</label>
@@ -20,7 +23,7 @@
       </div>
       <div class="mb-3">
         <label for="body" class="form-label">Share your story</label>
-        <textarea  formControlName="body" class="form-control" id="body" rows="3"></textarea>
+        <textarea  formControlName="body" class="form-control" id="body" rows="3" [ngClass]="{ 'is-invalid': clickedIt && inf['title'].errors }"></textarea>
       </div>
     <button  type="button" class="btn btn-primary"  (click)="onSubmit()">Submit</button>
     <!-- when button is click it submits its new object -->
