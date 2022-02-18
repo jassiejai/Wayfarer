@@ -9,9 +9,8 @@ import { POSTS } from '../posts' // importing post array for the search
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  cityList: any = CITIES;
   // postList: any = POSTS;
-  postList: any[] = [];
+  // postList: any[] = [];
   postTitles: string[] = [];
   // cityPosts: any = this.cityList.posts;
   // matchingPosts: any = [];
@@ -26,9 +25,9 @@ export class SearchComponent implements OnInit {
     constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-      for(let i = 0; i < this.cityList.length; i++){
-        for (let j = 0; j <this.cityList[i].posts.length; j++){
-          this.postTitles.push(this.cityList[i].posts[j].title);
+      for(let i = 0; i < CITIES.length; i++){
+        for (let j = 0; j <CITIES[i].posts.length; j++){
+          this.postTitles.push(CITIES[i].posts[j].title);
         }
       }
 
@@ -58,12 +57,12 @@ export class SearchComponent implements OnInit {
     //   }
     // }
     // Using the cities.ts array
-    for(let i = 0; i < this.cityList.length; i++){
-      console.log(this.cityList[i].posts);
-      for (let j = 0; j <this.cityList[i].posts.length; j++){
-        console.log(this.cityList[i].posts[j].title)
-          if (event.originalTarget.innerHTML==this.cityList[i].posts[j].title){
-            this.router.navigate(['cities/',this.cityList[i].id,'post',this.cityList[i].posts[j].id]);
+    for(let i = 0; i < CITIES.length; i++){
+      console.log(CITIES[i].posts);
+      for (let j = 0; j < CITIES[i].posts.length; j++){
+        console.log(CITIES[i].posts[j].title)
+          if (event.originalTarget.innerHTML==CITIES[i].posts[j].title){
+            this.router.navigate(['cities/',CITIES[i].id,'post',CITIES[i].posts[j].id]);
         }
       }
     }
