@@ -1,17 +1,17 @@
 <p>post works!</p>
 
-<div class="post">
+<!-- <div class="post">
   <p>{{post.title}}</p>
   <p>{{post.author}}</p>
   <p>{{post.date}}</p>
   <p>{{post.body}}</p>
-</div>
+</div> -->
 
-<form [formGroup]="form">
-<!-- #postForm="ngForm"> -->
-  {{form.value | json}}
+<!-- <form class="post" [formGroup]="form">
+ #postForm="ngForm">
+   {{form.value | json}}
   <hr />
-  <!-- <h1>{{date}}</h1> -->
+   <h1>{{date}}</h1> 
 
   <div class="mb-2">
     <label for="title" class="form-label">Title</label>
@@ -23,16 +23,16 @@
   </div>
   <div class="mb-3">
     <label  for="date" class="form-label">{{date}}</label>
-    <!-- <input ngModel name="date" type="" class="form-control" id="date" placeholder="06/19/1865"> -->
+     <input ngModel name="date" type="" class="form-control" id="date" placeholder="06/19/1865"> 
   </div>
   <div class="mb-3">
     <label for="body" class="form-label">Share your story</label>
     <textarea  formControlName="body" class="form-control" id="body" rows="3"></textarea>
   </div>
 <button  type="button" class="btn btn-primary"  (click)="onSubmit()">Submit</button>
-<!-- when button is click it submits its new object -->
+ when button is click it submits its new object -->
 
-</form>
-
+<!-- </form>
+ -->
 
 <!-- instead of having an array you are pulling from another componet -->

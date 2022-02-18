@@ -22,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 // import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
+import { FormComponent } from './form/form.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
     SearchComponent,
     SliderComponent,
     FilterPipe,
+   FormComponent,
 
   ],
   imports: [

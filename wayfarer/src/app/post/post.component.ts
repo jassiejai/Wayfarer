@@ -18,41 +18,42 @@ export class PostComponent implements OnInit {
   city: any;
   post: any;
   date: Date = new Date();
+  
 
-  form : FormGroup = new FormGroup ({
+//   form : FormGroup = new FormGroup ({
 
-    title: new FormControl(''),
-    author: new FormControl(''),
-    body: new FormControl('')
+//     title: new FormControl(''),
+//     author: new FormControl(''),
+//     body: new FormControl('')
 
-  })
+//   })
 
-clickedIt = false;
+// clickedIt = false;
 
-  constructor( private route: ActivatedRoute, private formBuild: FormBuilder, private citiesService: CitiesService) { }
+//   constructor( private route: ActivatedRoute, private formBuild: FormBuilder, private citiesService: CitiesService) { }
 
-  posted = this.citiesService.getCityId();
+//   posted = this.citiesService.getCityId();
 
-  get inf(): {[key: string] : AbstractControl}{
-    return this.form.controls;
-  };
+//   get inf(): {[key: string] : AbstractControl}{
+//     return this.form.controls;
+//   };
 
-  // auto create id for each new item 
+//   // auto create id for each new item 
 
-  postForm = this.formBuild.group({
-    title: ['',],
-    author: '',
-    body: ''
-  });
+//   postForm = this.formBuild.group({
+//     title: ['',],
+//     author: '',
+//     body: ''
+//   });
 
-  onSubmit(): void{
+//   onSubmit(): void{
 
-    this.clickedIt = true;
-    if(this.form.invalid) {
-      return
-    }
-    console.log(JSON.stringify(this.form.value, null, 1))
-  }
+//     this.clickedIt = true;
+//     if(this.form.invalid) {
+//       return
+//     }
+//     console.log(JSON.stringify(this.form.value, null, 1))
+//   }
 
   ngOnInit(): void {}
 

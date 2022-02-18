@@ -26,23 +26,13 @@
                  <img class="post-image" src={{post.avatar}} alt="image"> 
                 <div class="post-info">
                     <!-- if statement to print the specific post infromation -->
-<<<<<<< HEAD
-                    <a routerLink="post/{{i.id}}">
-                        <h2>{{i.title}}</h2>
-=======
                     <a routerLink="post/{{post.id}}">
                         <h2>{{post.title}}</h2>
->>>>>>> 846efbd32836b9ac1b186f9589a0c1ddc9744e50
                     </a>
                     <h4>{{post.date}}</h4>
                     <p>
-<<<<<<< HEAD
-                        {{i.body}} <!-- showing only post works in when called not showing other information-->
+                        {{post.body}} <!-- showing only post works in when called not showing other information-->
                     <!-- <app-post></app-post> -->
-=======
-                        {{post.body}}
-                        <!-- <app-post></app-post> -->
->>>>>>> 846efbd32836b9ac1b186f9589a0c1ddc9744e50
                     </p>
                     
                 </div>
@@ -51,6 +41,8 @@
     <!-- <div class="complete-post">
         <router-outlet></router-outlet>
     </div> -->
+    <app-post></app-post>
+
 </body>
 
 <router-outlet></router-outlet> <!--ccomment this out for the backup option--> 
