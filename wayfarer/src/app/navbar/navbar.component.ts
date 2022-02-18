@@ -11,9 +11,10 @@ import { ElementRef } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  //TODO: Clean up file, remove any test console logs
   cities: any = {};
-  citiesList: any[] = ['San Franciso', 'London', 'Gibraltar','Sydney', 'Seattle'];
-
+  // citiesList: any[] = ['San Francisco', 'London', 'Gibraltar','Sydney', 'Seattle']; // This array populates the names of the cities in the dropdown list
+  citiesList: string[] = []; // This array populates the names of the cities in the dropdown list
   constructor(private route: ActivatedRoute, private router: Router, private el:ElementRef) { }
 
   ngOnInit(): void {
@@ -22,6 +23,10 @@ export class NavbarComponent implements OnInit {
         let paramId: string = params.get('id') || '';
         return city.id === parseInt(paramId);
       })
+    })
+    // Gets the city names for the menu and stores them in an string array
+    CITIES.forEach(city => {
+      this.citiesList.push(city.name);
     })
   }
 
