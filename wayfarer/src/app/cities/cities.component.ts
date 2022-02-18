@@ -10,7 +10,7 @@ import { CitiesService } from './cities.service';
 })
 export class CitiesComponent implements OnInit {
 
-  city: any;
+  city: any = {};
   weather: any;
   // posts: any;
 
