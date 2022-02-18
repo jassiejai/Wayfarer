@@ -14,10 +14,10 @@ import { CitiesService } from '../cities/cities.service';
 })
 export class PostComponent implements OnInit {
 
-  cities : any = CITIES;
+  // cities : any = CITIES;
   city: any;
   post: any;
-  date: Date = new Date();
+  // date: Date = new Date();
   
 
 //   form : FormGroup = new FormGroup ({
@@ -30,7 +30,32 @@ export class PostComponent implements OnInit {
 
 // clickedIt = false;
 
-//   constructor( private route: ActivatedRoute, private formBuild: FormBuilder, private citiesService: CitiesService) { }
+constructor( private route: ActivatedRoute, private citiesService: CitiesService) { }
+
+findPost(){
+
+  console.log("this is a test");
+  this.route.paramMap.subscribe(params => {
+    const postId = parseInt(params.get('postId') || '');
+
+    console.log(postId);
+    this.city = CITIES.find( c => {
+      let paramId :string = this.citiesService.getCityId();
+      // let paramId: string = params.get('id') || '';
+      console.log(paramId)
+      return c.id === parseInt(paramId);
+    })
+
+    let postArray: any[] = this.city.posts;
+    console.log(postArray);
+    this.post = postArray.find( p => {
+      return p.id === postId;
+    })
+  })
+   
+  console.log(this.city)
+  console.log(this.post);
+}
 
 //   posted = this.citiesService.getCityId();
 
@@ -55,7 +80,6 @@ export class PostComponent implements OnInit {
 //     console.log(JSON.stringify(this.form.value, null, 1))
 //   }
 
-  ngOnInit(): void {}
-
-
-}
+ngOnInit(): void {
+  this.findPost();
+}}
