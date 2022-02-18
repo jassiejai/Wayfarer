@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { CITIES } from '../cities';
+import { CITIES } from '../cities';
 import { ActivatedRoute, Router } from '@angular/router';
 import { POSTS } from '../posts' // importing post array for the search
 
@@ -9,11 +9,12 @@ import { POSTS } from '../posts' // importing post array for the search
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  // cityList: any = CITIES;
-  postList: any = POSTS;
+  // postList: any = POSTS;
+  // postList: any[] = [];
+  postTitles: string[] = [];
   // cityPosts: any = this.cityList.posts;
   // matchingPosts: any = [];
-  // cities: any;
+  cities: any;
   posts: any;
 //TODO: See if the search can work with the cities array. 
 //TODO: Clean up this file.
@@ -24,6 +25,13 @@ export class SearchComponent implements OnInit {
     constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+      for(let i = 0; i < CITIES.length; i++){
+        for (let j = 0; j <CITIES[i].posts.length; j++){
+          this.postTitles.push(CITIES[i].posts[j].title);
+        }
+      }
+
+     
     // this.findPost("title 1");
     // this.route.paramMap.subscribe(params => {
     //   this.cities = CITIES.find( (city: { id: number; }) => {
@@ -41,9 +49,21 @@ export class SearchComponent implements OnInit {
   }
   // Compares the innerHTML title to the postList title, if match is found then pull the city id and post id and route
   onChange(event: any){
-    for (let i = 0; i < this.postList.length; i++) {
-      if (event.originalTarget.innerHTML==this.postList[i].title){
-        this.router.navigate(['cities/',this.postList[i].cityId,'post',this.postList[i].id]);
+    // console.log(event)
+    // Using the posts.ts array
+    // for (let i = 0; i < this.postList.length; i++) {
+    //   if (event.originalTarget.innerHTML==this.postList[i].title){
+    //     this.router.navigate(['cities/',this.postList[i].cityId,'post',this.postList[i].id]);
+    //   }
+    // }
+    // Using the cities.ts array
+    for(let i = 0; i < CITIES.length; i++){
+      console.log(CITIES[i].posts);
+      for (let j = 0; j < CITIES[i].posts.length; j++){
+        console.log(CITIES[i].posts[j].title)
+          if (event.originalTarget.innerHTML==CITIES[i].posts[j].title){
+            this.router.navigate(['cities/',CITIES[i].id,'post',CITIES[i].posts[j].id]);
+        }
       }
     }
   }

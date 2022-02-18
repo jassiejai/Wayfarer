@@ -3,7 +3,7 @@
     <div *ngIf="searchText != ''">
         <!-- <mat-select (selectionChange)="onChange($event)" > -->
            
-               <mat-option *ngFor="let data of postList | filter: searchText; index as i" (click)="onChange($event)" (click)="clearSearch()">{{data}}</mat-option>
+               <mat-option *ngFor="let data of postTitles | filter: searchText; index as i" (click)="onChange($event)" (click)="clearSearch()">{{data}}</mat-option>
           
         <!-- </mat-select> -->
     </div>
