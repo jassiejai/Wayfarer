@@ -38,6 +38,7 @@ findPost(){
   this.route.paramMap.subscribe(params => {
     const postId = parseInt(params.get('postId') || '');
 
+
     console.log(postId);
     this.city = CITIES.find( c => {
       let paramId :string = this.citiesService.getCityId();
@@ -83,3 +84,4 @@ findPost(){
 ngOnInit(): void {
   this.findPost();
 }}
+

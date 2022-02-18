@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CITIES } from './cities'
-import { POSTS } from './posts'
+
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { POSTS } from './posts'
 export class AppComponent {
   title = 'wayfarer';
   cities = CITIES;
-  posts = POSTS;
+
   
   getCities(){
     return this.cities;
