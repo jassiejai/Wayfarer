@@ -1,94 +1,58 @@
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+// import Validation from './utils/validation';
 import { Component, OnInit } from '@angular/core';
 import { CITIES } from '../cities';
 import { ActivatedRoute } from '@angular/router';
 import { CitiesService } from '../cities/cities.service';
-import { toArray } from 'rxjs';
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  styleUrls: ['./post.component.css'],
 })
 export class PostComponent implements OnInit {
 
   cities : any = CITIES;
   city: any;
   post: any;
+  date: Date = new Date();
 
+  form : FormGroup = new FormGroup ({
 
-  constructor( private route: ActivatedRoute, private citiesService: CitiesService) { }
+    title: new FormControl(''),
+    author: new FormControl(''),
+    body: new FormControl('')
 
-  findpost(){
+  })
 
-    console.log("this is a test");
-    this.route.paramMap.subscribe(params => {
-      const postId = parseInt(params.get('postId') || '');
+clickedIt = false;
 
-      console.log(postId);
-      this.city = CITIES.find( c => {
+  constructor( private route: ActivatedRoute, private formBuild: FormBuilder, private citiesService: CitiesService) { }
 
-        let paramId :string = this.citiesService.getCityId();
-        // let paramId: string = params.get('id') || '';
-       console.log(paramId)
-        return c.id === parseInt(paramId);
-      
-      })
+  posted = this.citiesService.getCityId();
 
-      let postArray: any[] = this.city.posts;
-      console.log(postArray);
-      this.post = postArray.find( p => {
-     return p.id === postId;
-   } )
-    }) 
-    console.log(this.city)
-    console.log(this.post);
+  get inf(): {[key: string] : AbstractControl}{
+    return this.form.controls;
+  };
 
+  // auto create id for each new item 
 
-    // return this.cities
-    // need to be able to find specific post from cities compo
-    // link to post and open a new page 
-    // pulling informtion from url like postman but in angular
-    // this.posts 
-    // return this.cities.post
+  postForm = this.formBuild.group({
+    title: ['',],
+    author: '',
+    body: ''
+  });
+
+  onSubmit(): void{
+
+    this.clickedIt = true;
+    if(this.form.invalid) {
+      return
+    }
+    console.log(JSON.stringify(this.form.value, null, 1))
   }
 
-  ngOnInit(): void {
- 
-    this.findpost()
-    // this.route.paramMap.subscribe(parmas => {
-    //   this.posts = parmas.get('postId')
+  ngOnInit(): void {}
 
-    //   this.city = CITIES.find( ({id}) => 
-    //   // equate id to whatever id is in the url 
-
-    //   )
-    //   this.cities = parmas.get('id')
-    // })
-
-    
-
-    // this.route.paramMap.subscribe(params => {
-    //   this.city = CITIES.find(city => {
-    //     let paramId: string = params.get('id') || '';
-    //     return city.id === parseInt(paramId);})
-
-
-        // console.log(this.cities[0].posts[0])
-      // })
-
-      // // define route using parameter and subscribe dot notations
-      // this.route.paramMap.subscribe(param => {
-  
-      //    return param.getAll(this.cities)
-      //   // this.posts 
-      //   // const postId = parseInt(param.get('postId'))
-      //   // this.city = CITIES.find(city =>{
-      //   //   return city.id === parseInt(param.get('id'));
-      //   // });
-  
-      //   // this.posts = this.city.posts[postId];
-      // });
-  
-      // console.log(this.route)
-    }
 }
+

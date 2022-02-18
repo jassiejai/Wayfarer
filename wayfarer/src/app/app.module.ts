@@ -11,10 +11,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostComponent } from './post/post.component';
 import { SearchComponent } from './search/search.component';
-import { FormsModule } from '@angular/forms';
 import { SliderComponent } from './slider/slider.component';
+// import { PostDirective } from './post.directive';
 // import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel'; // For future use for front page carousel
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { SliderComponent } from './slider/slider.component';
     MatSelectModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
