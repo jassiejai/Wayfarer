@@ -1,17 +1,21 @@
-<p>post works!</p>
-
 <div class="post">
-  <p>{{post.title}}</p>
-  <p>{{post.author}}</p>
-  <p>{{post.date}}</p>
-  <p>{{post.body}}</p>
+  <h1 class="title">{{post.title}}</h1>
+  <div class="post-info">
+    <img src="{{post.avatar}}" alt="avatar" class="user-avatar">
+    <h3 class="author">{{post.author}}</h3>
+    <h3 class="date">{{post.date}}</h3>
+  </div>
+  <img class="city-image" src="{{city.img}}" alt="city-image">
+  <p class="body">{{post.body}}</p>
 </div>
 
-<!-- <form [formGroup]="form"> -->
-<!-- #postForm="ngForm"> -->
-  {{form.value | json}}
-  <!-- <hr /> -->
-  <!-- <h1>{{date}}</h1> -->
+
+<!-- <form class="post" [formGroup]="form">
+ #postForm="ngForm">
+   {{form.value | json}}
+  <hr />
+   <h1>{{date}}</h1> 
+
 
   <!-- <div class="mb-2">
     <label for="title" class="form-label">Title</label>
@@ -23,16 +27,21 @@
   </div>
   <div class="mb-3">
     <label  for="date" class="form-label">{{date}}</label>
-    <!-- <input ngModel name="date" type="" class="form-control" id="date" placeholder="06/19/1865"> -->
-  <!-- </div>
+
+     <input ngModel name="date" type="" class="form-control" id="date" placeholder="06/19/1865"> 
+  </div>
+
   <div class="mb-3">
     <label for="body" class="form-label">Share your story</label>
     <textarea  formControlName="body" class="form-control" id="body" rows="3"></textarea>
   </div>
-<button  type="button" class="btn btn-primary"  (click)="onSubmit()">Submit</button>  -->
-<!-- when button is click it submits its new object -->
 
-<!-- </form> -->
 
+<button  type="button" class="btn btn-primary"  (click)="onSubmit()">Submit</button>
+ when button is click it submits its new object -->
+
+
+<!-- </form>
+ -->
 
 <!-- instead of having an array you are pulling from another componet -->

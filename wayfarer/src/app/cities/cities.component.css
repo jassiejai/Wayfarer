@@ -99,7 +99,7 @@ body {
     max-width: 1500px;
 }
 
-.post-entry input[type=text] {
+/* .post-entry input[type=text] {
     width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -118,7 +118,7 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
+  } */
 
 .post-info {
     max-height: 120px;
@@ -139,4 +139,8 @@ body {
 }
 a {
     text-decoration: none;
+}
+
+.post-form{
+
 }

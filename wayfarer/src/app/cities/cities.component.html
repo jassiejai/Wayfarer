@@ -33,19 +33,26 @@
                     </a>
                     <h4>{{post.date}}</h4>
                     <p>
-                        {{post.body}}
-                        <!-- <app-post></app-post> -->
+
+                        {{post.body}} <!-- showing only post works in when called not showing other information-->
+                    <!-- <app-post></app-post> -->
+
                     </p>
                     
                 </div>
             </div>
     </div>
+    <div class="post-entry">
+        <app-form></app-form>
+    </div>
     <!-- <div class="complete-post">
         <router-outlet></router-outlet>
     </div> -->
+    
+
 </body>
 
-<router-outlet></router-outlet> <!--ccomment this out for the backup option--> 
+<!-- <router-outlet></router-outlet> ccomment this out for the backup option  -->
 
 
 
