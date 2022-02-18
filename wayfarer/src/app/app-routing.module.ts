@@ -5,7 +5,7 @@ import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
   {path: 'cities/:id', 
-    {
+    children: [{
       path: 'post/:postId',
       component: PostComponent
     }
