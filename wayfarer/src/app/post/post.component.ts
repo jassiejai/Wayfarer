@@ -31,30 +31,60 @@ clickedIt = false;
 
   constructor( private route: ActivatedRoute, private formBuild: FormBuilder, private citiesService: CitiesService) { }
 
-  posted = this.citiesService.getCityId();
+  // posted = this.citiesService.getCityId();
 
-  get inf(): {[key: string] : AbstractControl}{
-    return this.form.controls;
-  };
+  // get inf(): {[key: string] : AbstractControl}{
+  //   return this.form.controls;
+  // };
 
-  // auto create id for each new item 
+  // // auto create id for each new item 
 
-  postForm = this.formBuild.group({
-    title: ['',],
-    author: '',
-    body: ''
-  });
+  // postForm = this.formBuild.group({
+  //   title: ['',],
+  //   author: '',
+  //   body: ''
+  // });
 
-  onSubmit(): void{
+  // onSubmit(): void{
 
-    this.clickedIt = true;
-    if(this.form.invalid) {
-      return
-    }
-    console.log(JSON.stringify(this.form.value, null, 1))
+  //   this.clickedIt = true;
+  //   if(this.form.invalid) {
+  //     return
+  //   }
+  //   console.log(JSON.stringify(this.form.value, null, 1))
+  // }
+
+  //Needed this to show the post and not to break the application flow
+  findpost(){
+
+    console.log("this is a test");
+    this.route.paramMap.subscribe(params => {
+      const postId = parseInt(params.get('postId') || '');
+      
+
+      console.log(postId);
+
+      this.city = CITIES.find( c => {
+
+        let paramId :string = this.citiesService.getCityId();
+        // let paramId: string = params.get('id') || '';
+       console.log(paramId)
+        return c.id === parseInt(paramId);
+      
+      })
+
+      let postArray: any[] = this.city.posts;
+      // console.log(postArray);
+      this.post = postArray.find( p => {
+  
+     
+      console.log(p);
+      return p.id === postId;
+   } 
+   )
+    })
+  } 
+  ngOnInit(): void {
+    this.findpost()
   }
-
-  ngOnInit(): void {}
-
-
 }

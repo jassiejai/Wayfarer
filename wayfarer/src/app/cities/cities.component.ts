@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 import { CITIES } from '../cities';
 import { CitiesService } from './cities.service';
@@ -14,7 +15,7 @@ export class CitiesComponent implements OnInit {
   weather: any;
   // posts: any;
 
-  constructor(private route: ActivatedRoute, private citiesService : CitiesService) { }
+  constructor(private route: ActivatedRoute, private citiesService : CitiesService, private http: HttpClient) { }
 
   get sortPosts(){
         return this.city.posts.sort((a:any,b:any) => {
@@ -44,5 +45,6 @@ export class CitiesComponent implements OnInit {
         return city.id === parseInt(paramId);
       })
     })
+
   }
 }

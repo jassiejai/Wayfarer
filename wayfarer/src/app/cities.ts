@@ -9,7 +9,6 @@ export const CITIES = [
         id: 1,
         title: "San Francisco Treat",
         author: "Wade Wilson",
-        avatar: "../assets/img/avatars/51063.jpg",
         date: "2015-08-15 17:17:30.0",
         body: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
          },
@@ -17,7 +16,6 @@ export const CITIES = [
         id: 2,
         title: "Tech Sector",
         author: "John Skullman",
-        avatar: "../assets/img/avatars/145451.jpg",
         date: "2018-08-15 17:28:30.0",
         body: "Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi"
         }]

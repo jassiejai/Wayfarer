@@ -5,23 +5,17 @@ import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
   {path: 'cities/:id', 
-  component: CitiesComponent, // backup option: comment this out 
+  component: CitiesComponent,  
   children : [
-    // { ///uncomment this for the backup option
-    //   path: '',
-    //   pathMatch: 'full',
-    //   component: CitiesComponent
-
-    // },
     {
       path: 'post/:postId',
       component: PostComponent
-
     }
-    
   ]
 }
 ];
+
+// Backup routing option, currently break search
 // const routes: Routes = [
 //   {path: 'cities/:id', 
 //   // component: CitiesComponent,
