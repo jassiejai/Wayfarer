@@ -21,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 // import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel'; // For future use for front page carousel
 // import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
+// import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
 import { FormComponent } from './form/form.component';
 
 
@@ -45,7 +45,7 @@ import { FormComponent } from './form/form.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule, 
-    MdbCheckboxModule, 
+    // MdbCheckboxModule, 
     ReactiveFormsModule
 // MDBBootstrapModule,
 // MdbCollapseModule,
