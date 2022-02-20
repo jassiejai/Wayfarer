@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CitiesComponent } from './cities/cities.component';
 import { PostComponent } from './post/post.component';
+import { SliderComponent } from './slider/slider.component';
 
 const routes: Routes = [
+  {path: '', component: SliderComponent},
   {path: 'cities/:id', 
   component: CitiesComponent,
     children: [{
