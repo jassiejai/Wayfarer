@@ -31,7 +31,8 @@ export class NavbarComponent implements OnInit {
 
 
   onChange(event: any){
-    this.router.navigate(['cities/',event.value]);
+    console.log(event)
+    this.router.navigate(['cities/',event]);
     this.el.nativeElement.querySelector('span.mat-select-min-line').innerText = this.citiesList[event.value-1]; // This part sets the text in the dropdown menu to the city selected
   }
 
