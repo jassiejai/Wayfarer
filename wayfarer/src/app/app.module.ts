@@ -28,7 +28,7 @@ import { FormComponent } from './form/form.component';
     SearchComponent,
     SliderComponent,
     FilterPipe,
-   FormComponent,
+    FormComponent,
 
   ],
   imports: [
