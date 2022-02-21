@@ -21,21 +21,18 @@
     <div  class="city-posts">
         <!-- <router-outlet></router-outlet> -->
             <div *ngFor="let post of sortPosts;let j = index;" class="post">
-                <!-- <img class="post-image" src="data:image/jpeg;base64,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" alt="image"> -->
-                <!-- Returns image with post author's initials -->
-                 <!-- <img class="post-image" src="https://ui-avatars.com/api/?background=0D8ABC&color=fff&name={{post.author}}" alt="image">  -->
                  <!-- Returns image based on author's name -->
                  <img class="post-image" src="https://api.minimalavatars.com/avatar/{{post.author}}/png" alt="image">
                 <div class="post-info">
                     <!-- if statement to print the specific post infromation -->
-                    <a routerLink="post/{{post.id}}">
-                        <h2>{{post.title}}</h2>
+                    <a routerLink="post/{{post.id}}" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                       <a > <h2>{{post.title}}</h2> </a>
                     </a>
                     <h4>{{post.date}}</h4>
                     <p>
 
-                        {{post.body}} <!-- showing only post works in when called not showing other information-->
-                    <!-- <app-post></app-post> -->
+                       {{post.body}}  <!-- showing only post works in when called not showing other information -->
+                    
 
                     </p>
                     
@@ -49,11 +46,13 @@
         <router-outlet></router-outlet>
     </div> -->
     
+    
+    
 
 </body>
 
-<!-- <router-outlet></router-outlet> ccomment this out for the backup option  -->
+<router-outlet></router-outlet>
 
-
+<!-- <app-post></app-post> -->
 
 

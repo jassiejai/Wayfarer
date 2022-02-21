@@ -39,6 +39,7 @@ export class CitiesComponent implements OnInit {
           .subscribe(response => {
           console.log(city.name);
           console.log(response);
+          
           this.weather = response;
           })
         }
@@ -46,6 +47,12 @@ export class CitiesComponent implements OnInit {
         return city.id === parseInt(paramId);
       })
     })
-
+    console.log(this.city.posts)
+    for (let j = 0; j < this.city.posts.length; j++){
+      console.log(this.city.posts[j].title)
+        // if (event.originalTarget.innerHTML==CITIES[i].posts[j].title){
+        //   this.router.navigate(['cities/',CITIES[i].id,'post',CITIES[i].posts[j].id]);
+        
+      }
   }
 }

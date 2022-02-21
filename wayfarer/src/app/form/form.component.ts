@@ -28,7 +28,7 @@ clickedIt = false;
   
 
   posted = this.citiesService.getCityId();
-  pForm : FormGroup;
+  // pForm : FormGroup;
 
   get inf(): {[key: string] : AbstractControl}{
     return this.form.controls;
@@ -53,11 +53,11 @@ clickedIt = false;
 
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
-    this.pForm = this.fBuild.group({
-      title: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(200)]],
-      author: ['', Validators.required],
-      body: ['', Validators.required]
-    });
+    // this.pForm = this.fBuild.group({
+    //   title: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(200)]],
+    //   author: ['', Validators.required],
+    //   body: ['', Validators.required]
+    // });
   }
 
 

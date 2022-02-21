@@ -26,9 +26,11 @@ export class SearchComponent implements OnInit {
           this.postTitles.push(CITIES[i].posts[j].title);
         }
       }
+      
   }
   // Compares the innerHTML title to the city.post title, if match is found then pull the city id and post id and route
   onChange(event: any){
+    console.log(event)
     // Using the cities.ts array
     for(let i = 0; i < CITIES.length; i++){
       console.log(CITIES[i].posts);
