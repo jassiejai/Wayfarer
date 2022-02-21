@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { CITIES } from '../cities';
 import { CitiesService } from './cities.service';
+
 @Component({
   selector: 'app-cities',
   templateUrl: './cities.component.html',
