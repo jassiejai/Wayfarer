@@ -8,6 +8,7 @@ const routes: Routes = [
   {path: '', component: SliderComponent},
   {path: 'cities/:id', 
   component: CitiesComponent,
+  
     children: [{
       path: 'post/:postId',
       component: PostComponent

@@ -16,7 +16,7 @@ export class PostComponent implements OnInit {
 
   // cities : any = CITIES;
   city: any;
-  post: any;
+  post: any = 0;
   // date: Date = new Date();
   
 
@@ -36,7 +36,7 @@ findPost(){
 
   console.log("this is a test");
   this.route.paramMap.subscribe(params => {
-    const postId = parseInt(params.get('postId') || '');
+    const postId = parseInt(params.get('postId') || 'error');
 
 
     console.log(postId);
@@ -49,14 +49,18 @@ findPost(){
 
     let postArray: any[] = this.city.posts;
     console.log(postArray);
+    console.log(postId);
     this.post = postArray.find( p => {
       return p.id === postId;
     })
   })
-   
   console.log(this.city)
   console.log(this.post);
 }
+  
+   
+  
+
 
 //   posted = this.citiesService.getCityId();
 
@@ -83,5 +87,14 @@ findPost(){
 
 ngOnInit(): void {
   this.findPost();
-}}
+    // for(let i = 0; i < CITIES.length; i++){
+  //   console.log(CITIES[i].posts);
+  for (let j = 0; j < this.city.posts.length; j++){
+    console.log(this.city.posts[j].title)
+      // if (event.originalTarget.innerHTML==CITIES[i].posts[j].title){
+      //   this.router.navigate(['cities/',CITIES[i].id,'post',CITIES[i].posts[j].id]);
+      
+    }
+  }
+}
 

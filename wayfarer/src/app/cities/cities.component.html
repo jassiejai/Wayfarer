@@ -25,14 +25,14 @@
                  <img class="post-image" src="https://api.minimalavatars.com/avatar/{{post.author}}/png" alt="image">
                 <div class="post-info">
                     <!-- if statement to print the specific post infromation -->
-                    <a routerLink="post/{{post.id}}">
-                        <h2>{{post.title}}</h2>
+                    <a routerLink="post/{{post.id}}" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                       <a > <h2>{{post.title}}</h2> </a>
                     </a>
                     <h4>{{post.date}}</h4>
                     <p>
 
-                        {{post.body}} <!-- showing only post works in when called not showing other information-->
-                    <!-- <app-post></app-post> -->
+                       {{post.body}}  <!-- showing only post works in when called not showing other information -->
+                    
 
                     </p>
                     
@@ -46,11 +46,13 @@
         <router-outlet></router-outlet>
     </div> -->
     
+    
+    
 
 </body>
 
-<!-- <router-outlet></router-outlet> ccomment this out for the backup option  -->
+<router-outlet></router-outlet>
 
-
+<!-- <app-post></app-post> -->
 
 
