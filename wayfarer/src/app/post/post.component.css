@@ -57,3 +57,10 @@
 .city-image {
     padding: 2%;
 }
+
+.modal-title {
+    margin: 2% auto;
+    font-size: xx-large;
+    font-weight: bold;
+    justify-content: center;
+}
