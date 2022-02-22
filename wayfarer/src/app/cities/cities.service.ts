@@ -9,6 +9,7 @@ export class CitiesService {
   cityId : string = "";
   cityName : string = "";
   countryCode: string = "";
+  postId: string = "";
 
   constructor(private http: HttpClient) { }
 
@@ -25,5 +26,4 @@ export class CitiesService {
   getCityId() {
     return this.cityId;
   }
-
 }

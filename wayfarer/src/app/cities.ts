@@ -32,7 +32,6 @@ export const CITIES = [
         id: 1,
         title: "Royal",
         author: "Bruce Johnson",
-        avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random()*20)+1}.jpg`,
         date: "2018-08-15 17:28:30.0",
         body: "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.",
         cityId: 2
@@ -48,7 +47,6 @@ export const CITIES = [
         id: 1,
         title: "Monkey Business",
         author: "Lacy Mcknight",
-        avatar: `https://randomuser.me/api/portraits/women/${Math.floor(Math.random()*20)+1}.jpg`,
         date: "2018-08-15 17:28:30.0",
         body: "Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.",
         cityId: 3
@@ -64,7 +62,6 @@ export const CITIES = [
           id: 1,  
           title: "Fan of Opera",
           author: "Fred Griffin",
-          avatar: `https://randomuser.me/api/portraits/men/${Math.floor(Math.random()*20)+1}.jpg`,
           date: "2018-08-15 17:28:30.0",
           body: "Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.",
           cityId: 4
@@ -80,7 +77,6 @@ export const CITIES = [
           id: 1,
           title: "Trip to the point tower",
           author: "Ora Roberts",
-          avatar: `https://randomuser.me/api/portraits/women/${Math.floor(Math.random()*20)+1}.jpg`,
           date: "2018-08-15 17:28:30.0",
           body: "Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.",
           cityId: 5

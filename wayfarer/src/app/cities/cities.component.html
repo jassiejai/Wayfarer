@@ -12,22 +12,19 @@
             <img src="http://openweathermap.org/img/wn/{{weather.weather[0].icon}}@2x.png" alt="weather-icon">
             <h3>{{weather.weather[0].description}}</h3>
             <h4>{{weather.main.temp}} F</h4>
-            <!-- <h3>30.0F</h3> -->
-            <!-- <p>Min:20.0F, Max: 40.0F</p> -->
             <p>Max: {{weather.main.temp_max}} F</p>
             <p>Min: {{weather.main.temp_min}} F</p>
         </div>
     </div>
   
     <div  class="city-posts">
-        <!-- <router-outlet></router-outlet> -->
             <div *ngFor="let post of sortPosts;let j = index;" class="post">
                  <!-- Returns image based on author's name -->
                  <img class="post-image" src="https://api.minimalavatars.com/avatar/{{post.author}}/png" alt="image">
                 <div class="post-info">
                     <!-- if statement to print the specific post infromation -->
-                    <a routerLink="post/{{post.id}}" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                       <a > <h2>{{post.title}}</h2> </a>
+                    <a routerLink="post/{{post.id}}" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                       <h2>{{post.title}}</h2>
                     </a>
                     <h4>{{post.date}}</h4>
                     <p>
@@ -47,17 +44,8 @@
           Launch demo modal
         </button>
     </div>
-    <!-- <div class="complete-post">
-        <router-outlet></router-outlet>
-    </div>-->
     
-    
-    
-
 </body>
 
 <router-outlet></router-outlet>
-
-<!-- <app-post></app-post> -->
-
 
