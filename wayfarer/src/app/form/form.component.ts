@@ -49,14 +49,14 @@ clickedIt = false;
       })
       let maxId = 0;
     this.posts.forEach(post => {
-      post.forEach((p: any) => {
+      
         // console.log(p)
-        if(p.cityId == this.cityId){
-          if(p.id > maxId) {
-            maxId = p.id;
+        if(post.cityId == this.cityId){
+          if(post.id > maxId) {
+            maxId = post.id;
           }
         }
-      })
+      
     }) 
     console.log(maxId + 1)
    
