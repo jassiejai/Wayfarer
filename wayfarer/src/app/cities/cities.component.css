@@ -126,6 +126,10 @@ body {
     padding: 10px;
 }
 
+.post-info h2 {
+    margin: 0%;
+  }
+
 .post-info h4 {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -135,7 +139,8 @@ body {
 .post-info p {
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 40px;
+  height: 45px;
+  margin-bottom: 0%;
 }
 a {
     text-decoration: none;

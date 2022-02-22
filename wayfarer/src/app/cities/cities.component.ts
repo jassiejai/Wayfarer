@@ -14,16 +14,17 @@ export class CitiesComponent implements OnInit {
 
   city: any;
   weather: any;
-  posts = this.postDataService.getAllPosts();
-  citypost: any;
+  // posts = this.postDataService.getAllPosts();
+  // citypost: any;
 
   constructor(private route: ActivatedRoute, private citiesService : CitiesService, private http: HttpClient, private postDataService: PostdataService) { }
 
   get sortPosts(){
-        return this.citypost.sort((a:any,b:any) => {
+        return this.city.posts.sort((a:any,b:any) => {
           return <any>new Date(b.date) - <any>new Date(a.date);
         });
       }
+
   ngOnInit(): void {
  
     
@@ -47,22 +48,8 @@ export class CitiesComponent implements OnInit {
         
         return city.id === parseInt(paramId);
       })
+      console.log("this is the city",this.city)
+      console.log("these are the posts",this.city.posts)
     });
-    this.route.paramMap.subscribe(params => {
-      this.citypost = this.posts.find((post: any) => {
-        console.log(post);
-        let paramId: string = params.get('id') || '';
-        console.log(paramId);
-        console.log("city id: " + post[0].cityId);
-        if (post[0].cityId === parseInt(paramId)) {
-          console.log(post[0].cityId)
-          console.log(paramId)   
-      }
-      console.log(post[0].cityId === parseInt(paramId))
-      return post[0].cityId === parseInt(paramId)
-    });
-  });
-  console.log(this.citypost)
-  
   }
 }
