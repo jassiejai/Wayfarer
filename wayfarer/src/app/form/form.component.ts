@@ -21,9 +21,11 @@ import { PostdataService } from '../postdata.service';
 
 export class FormComponent implements OnInit {
 
+  postId: any;
   cityId: number = 0;
   date : Date = new Date();
   currentDateTime = this.datePipe.transform((new Date), 'MM/dd/yyyy h:mm');
+  posts = this.postDataService.getAllPosts();
   form : FormGroup = new FormGroup ({
     id: new FormControl(''),
     title: new FormControl(''),
@@ -53,10 +55,22 @@ clickedIt = false;
       const cityId = parseInt(params.get('id') || 'error');
       this.cityId = cityId;
       })
+      let maxId = 0;
+    this.posts.forEach(post => {
+      post.forEach((p: any) => {
+        // console.log(p)
+        if(p.cityId == this.cityId){
+          if(p.id > maxId) {
+            maxId = p.id;
+          }
+        }
+      })
+    }) 
+    console.log(maxId + 1)
    
 
     this.form = this.formBuild.group({
-        id: new FormControl(''),
+        id: new FormControl(maxId + 1),
         title: new FormControl(''),
         author: new FormControl(''),
         body: new FormControl(''),
