@@ -57,7 +57,7 @@ export class SearchComponent implements OnInit {
     this.posts.forEach((p) => {
          
         console.log(p)
-        if(p.title === event.originalTarget.innerHTML) {
+        if(p.title === event) {
           this.router.navigate(['cities/',p.cityId,'post',p.id]);
         }
       
