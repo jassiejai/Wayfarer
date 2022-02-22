@@ -4,11 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { CITIES } from '../cities';
 import { CitiesService } from './cities.service';
-<<<<<<< HEAD
-
-=======
 import { PostdataService } from '../postdata.service';
->>>>>>> 3048429c17e6713373182f1a27508aa7d43ed242
 @Component({
   selector: 'app-cities',
   templateUrl: './cities.component.html',

@@ -43,6 +43,7 @@ clickedIt = false;
   }
 
   ngOnInit(): void {
+    
     console.log(this.currentDateTime);
     console.log(this.date);
 
