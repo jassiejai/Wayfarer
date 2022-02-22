@@ -8,14 +8,16 @@
     
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
-        <input  formControlName="title" type="text" class="form-control" [ngClass]="{ 'is-invalid': clickedIt && inf['title'].errors }">
-        <div *ngIf="clickedIt && inf['title'].errors" class="invalid-feedback">
-        <div *ngIf="inf['title'].errors['required']">Title Required</div>
+        <input  formControlName="title" type="text" class="form-control" >
+        <!-- <div *ngIf="clickedIt && inf['title'].errors" class="invalid-feedback">[ngClass]="{ 'is-invalid': clickedIt && inf['title'].errors }
+        <div *ngIf="inf['title'].errors['required']">Title Required</div> -->
     </div>
-    </div>
+    <!-- </div>   add divs to the end--> 
       <div class="mb-3">
         <label for="author" class="form-label">Author</label>
-        <input  formControlName="author" type="text" id="author" placeholder="Author" [ngClass]="{ 'is-invalid': clickedIt && inf['title'].errors }">
+        <input  formControlName="author" type="text" id="author" placeholder="Author">
+        <!-- <div *ngIf="clickedIt && inf['author'].errors" class="invalid-feedback"> [ngClass]="{ 'is-invalid': clickedIt && inf['author'].errors }"
+        <div *ngIf="inf['author'].errors['required']">Author Required</div> -->
       </div>
       <div class="mb-3">
         <label  for="date" class="form-label">{{date}}</label>
@@ -23,7 +25,9 @@
       </div>
       <div class="mb-3">
         <label for="body" class="form-label">Share your story</label>
-        <textarea  formControlName="body" class="form-control" id="body" rows="3" [ngClass]="{ 'is-invalid': clickedIt && inf['title'].errors }"></textarea>
+        <textarea  formControlName="body" class="form-control" id="body" rows="3" ></textarea>
+        <!-- <div *ngIf="clickedIt && inf['body'].errors" class="invalid-feedback">[ngClass]="{ 'is-invalid': clickedIt && inf['body'].errors }"
+          <div *ngIf="inf['body'].errors['required']">Body Required</div> -->
       </div>
     <button  type="button" class="btn btn-primary"  (click)="onSubmit()">Submit</button>
     <!-- when button is click it submits its new object -->

@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AbstractControl, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { CitiesService } from '../cities/cities.service';
 import { Validators } from '@angular/forms';
+import { createPostfix } from 'typescript';
 
 @Component({
   selector: 'app-form',
@@ -10,29 +11,47 @@ import { Validators } from '@angular/forms';
   styleUrls: ['./form.component.css']
 })
 
+// @Output() createPost = new EventEmitter<Post>();
+
+// createPost() {
+
+// }
+
 export class FormComponent implements OnInit {
 
+
+  // title;
   date : Date = new Date();
 
+
+
+
+
+  // form : FormGroup = new FormGroup ({
+
+  //   title: new FormControl(null),
+  //   author: new FormControl(null),
+  //   body: new FormControl(null)
+
+  // })
   form : FormGroup = new FormGroup ({
 
-    title: new FormControl(''),
-    author: new FormControl(''),
-    body: new FormControl('')
+    title: new FormControl(null),
+    author: new FormControl(null),
+    body: new FormControl(null)
 
   })
-
 clickedIt = false;
 
-  constructor( private route: ActivatedRoute, private fBuild: FormBuilder, private citiesService: CitiesService) { }
+  constructor( private route: ActivatedRoute, private citiesService: CitiesService) { }
   
 
-  posted = this.citiesService.getCityId();
+  // posted = this.citiesService.getCityId();
   // pForm : FormGroup;
 
-  get inf(): {[key: string] : AbstractControl}{
-    return this.form.controls;
-  };
+  // get inf(): {[key: string] : AbstractControl}{
+  //   return this.form.controls;
+  // };
 
   // auto create id for each new item 
 
@@ -51,6 +70,7 @@ clickedIt = false;
     this.form.reset();
   }
 
+  
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
     // this.pForm = this.fBuild.group({
@@ -58,6 +78,10 @@ clickedIt = false;
     //   author: ['', Validators.required],
     //   body: ['', Validators.required]
     // });
+
+    
+  
+
   }
 
 
