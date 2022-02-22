@@ -28,7 +28,7 @@ export class FormComponent implements OnInit {
   posts = this.postDataService.getAllPosts();
   form : FormGroup = new FormGroup ({
     id: new FormControl(''),
-    title: new FormControl('', Validators.required),
+    title: new FormControl(''),
     author: new FormControl(''),
     body: new FormControl(''),
     date: new FormControl(''),
@@ -71,9 +71,9 @@ clickedIt = false;
 
     this.form = this.formBuild.group({
         id: new FormControl(maxId + 1),
-        title: new FormControl(''),
-        author: new FormControl(''),
-        body: new FormControl(''),
+        title: new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(200)]),
+        author: new FormControl('', Validators.required),
+        body: new FormControl('', Validators.required),
         date: new FormControl(this.date),
         cityId: new FormControl(this.cityId),
     })  
