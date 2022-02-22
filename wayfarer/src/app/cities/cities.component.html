@@ -18,6 +18,7 @@
             <p>Min: {{weather.main.temp_min}} F</p>
         </div>
     </div>
+  
     <div  class="city-posts">
         <!-- <router-outlet></router-outlet> -->
             <div *ngFor="let post of sortPosts;let j = index;" class="post">
@@ -41,10 +42,14 @@
     </div>
     <div class="post-entry">
         <app-form></app-form>
+        <h1>Create a post</h1>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
+          Launch demo modal
+        </button>
     </div>
     <!-- <div class="complete-post">
         <router-outlet></router-outlet>
-    </div> -->
+    </div>-->
     
     
     
