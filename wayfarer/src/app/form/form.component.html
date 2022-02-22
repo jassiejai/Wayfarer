@@ -15,6 +15,7 @@
             
               <div class="mb-2">
                 <label for="title" class="form-label">Title</label>
+               
                 <input  formControlName="title" type="text" class="form-control" id="title" placeholder="Title">
               </div>
               <div class="mb-3">
@@ -29,7 +30,7 @@
                 <label for="body" class="form-label">Share your story</label>
                 <textarea  formControlName="body" class="form-control" id="body" rows="3"></textarea>
               </div>
-            <button  type="button" class="btn btn-primary"  (click)="onSubmit()">Submit</button>
+            <button  type="button" class="btn btn-primary"  (click)="onSubmit()" data-bs-dismiss="modal">Submit</button>
             <!-- when button is click it submits its new object -->
             
             </form>
