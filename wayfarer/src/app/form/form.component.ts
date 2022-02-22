@@ -23,11 +23,12 @@ export class FormComponent implements OnInit {
     title: new FormControl(''),
     author: new FormControl(''),
     body: new FormControl(''),
-    date: new FormControl(this.date),
+    date: new FormControl(''),
     cityId: new FormControl(),
-  
+    
     
   })
+  // form : FormGroup;
 
 clickedIt = false;
 
@@ -45,6 +46,15 @@ clickedIt = false;
       this.cityId = cityId;
       })
    
+
+    this.form = this.formBuild.group({
+        id: new FormControl(''),
+        title: new FormControl(''),
+        author: new FormControl(''),
+        body: new FormControl(''),
+        date: new FormControl(this.date),
+        cityId: new FormControl(this.cityId),
+    })  
 
     throw new Error('Method not implemented.');
 
@@ -76,6 +86,8 @@ clickedIt = false;
       return
     }
     console.log(JSON.stringify(this.form.value, null, 1))
+    console.log(this.form.value)
+    this.postDataService.addPost(this.form.value)
   }
 
 }
