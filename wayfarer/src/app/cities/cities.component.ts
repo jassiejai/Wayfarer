@@ -24,6 +24,7 @@ export class CitiesComponent implements OnInit {
           return <any>new Date(b.date) - <any>new Date(a.date);
         });
       }
+
   ngOnInit(): void {
  
     
@@ -63,6 +64,8 @@ export class CitiesComponent implements OnInit {
     });
   });
   console.log(this.citypost)
+  
+
   
   }
 }
