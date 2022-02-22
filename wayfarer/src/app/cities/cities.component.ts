@@ -15,7 +15,7 @@ export class CitiesComponent implements OnInit {
   city: any;
   weather: any;
   posts = this.postDataService.getAllPosts();
-  citypost: any;
+  citypost: any[] = [];
 
   constructor(private route: ActivatedRoute, private citiesService : CitiesService, private http: HttpClient, private postDataService: PostdataService) { }
 
@@ -50,17 +50,22 @@ export class CitiesComponent implements OnInit {
       })
     });
     this.route.paramMap.subscribe(params => {
-      this.citypost = this.posts.find((post: any) => {
+      this.citypost = [];
+      this.posts.forEach((post: any) => {
         console.log(post);
         let paramId: string = params.get('id') || '';
         console.log(paramId);
-        console.log("city id: " + post[0].cityId);
-        if (post[0].cityId === parseInt(paramId)) {
-          console.log(post[0].cityId)
-          console.log(paramId)   
+        console.log("city id: " + post.cityId);
+        if (post.cityId === parseInt(paramId)) {
+          console.log(post.cityId)
+          console.log(paramId)
+          console.log(post);   
+          // if(this.citypost)
+          this.citypost.push(post);
+          
       }
-      console.log(post[0].cityId === parseInt(paramId))
-      return post[0].cityId === parseInt(paramId)
+      console.log(post.cityId === parseInt(paramId))
+      return post.cityId === parseInt(paramId)
     });
   });
   console.log(this.citypost)

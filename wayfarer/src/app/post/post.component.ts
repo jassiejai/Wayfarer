@@ -19,7 +19,7 @@ export class PostComponent implements OnInit {
   city: any;
   post: any = 0;
   posts = this.postDataService.getAllPosts();
-  citypost: any;
+  citypost: any[] = [];
   // date: Date = new Date();
   
 
@@ -57,16 +57,15 @@ findPost(){
     })
 
 
-    
-      this.citypost = this.posts.find((post: any) => {
-        console.log(post);
-        console.log("city id: " + post[0].cityId);
-        if (post[0].cityId === this.city.id) {
-          console.log(post[0].cityId)
-          console.log(this.city.id)   
-      }
-      console.log(post[0].cityId === this.city.id)
-      return post[0].cityId === this.city.id;
+
+    this.posts.forEach((post: any)  => {
+      console.log(post)
+        if(post.cityId === this.city.id) {
+          console.log(post)
+          this.citypost.push(post);
+
+        }
+     
       });
     
     console.log(this.citypost)
