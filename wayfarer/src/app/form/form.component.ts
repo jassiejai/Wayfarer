@@ -47,11 +47,13 @@ clickedIt = false;
       const cityId = parseInt(params.get('id') || 'error');
       this.cityId = cityId;
       })
+      console.log(this.cityId)
       let maxId = 0;
     this.posts.forEach(post => {
       
         // console.log(p)
         if(post.cityId == this.cityId){
+          console.log(post)
           if(post.id > maxId) {
             maxId = post.id;
           }

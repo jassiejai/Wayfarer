@@ -1,7 +1,7 @@
 <div class="md-form">
     <input type="search" [(ngModel)]="searchText" placeholder="Search" >
     <div *ngIf="searchText != ''">
-        <mat-option  *ngFor="let data of postTitles | filter: searchText; index as i" (click)="onChange($event)" (click)="clearSearch()">{{data}}</mat-option>
+        <mat-option  *ngFor="let data of postTitles | filter: searchText; index as i" (click)="onChange(data)" (click)="clearSearch()">{{data}}</mat-option>
     </div>
 </div>
 
