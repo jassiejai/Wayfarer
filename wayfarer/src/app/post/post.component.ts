@@ -89,6 +89,8 @@ ngOnInit(): void {
   this.findPost();
     // for(let i = 0; i < CITIES.length; i++){
   //   console.log(CITIES[i].posts);
+
+
   for (let j = 0; j < this.city.posts.length; j++){
     console.log(this.city.posts[j].title)
       // if (event.originalTarget.innerHTML==CITIES[i].posts[j].title){

@@ -16,6 +16,7 @@ import { FilterPipe } from './filter.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
+import { DatePipe } from '@angular/common'
 
 
 
@@ -42,7 +43,7 @@ import { FormComponent } from './form/form.component';
     ReactiveFormsModule,
 
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 
