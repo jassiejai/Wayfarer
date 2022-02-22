@@ -46,7 +46,8 @@
     margin: 2% auto;
     font-size: xx-large;
     font-weight: bold;
-    /* text-align: center; */
+    /* text-align: center;
+    align-items: center; */
 }
 .body {
     padding: 5%;
@@ -54,13 +55,16 @@
     line-height: 2;
 }
 
-.city-image {
+/* .city-image {
     padding: 2%;
-}
+} */
 
 .modal-title {
     margin: 2% auto;
     font-size: xx-large;
     font-weight: bold;
     text-align: center;
+}
+hr {
+    margin: 0%;
 }

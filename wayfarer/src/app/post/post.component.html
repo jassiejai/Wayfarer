@@ -1,3 +1,33 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen-lg-down" class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      <div class="modal-header">
+        <h1 class="title" id="exampleModalLabel">{{post.title}}</h1>
+      </div>
+      
+      <div class="post-info">
+          <img src="https://api.minimalavatars.com/avatar/{{post.author}}/png" alt="avatar" class="user-avatar">
+          <h3 class="author">{{post.author}}</h3>
+          <h3 class="date">{{post.date}}</h3>
+      </div>
+
+      <hr>
+      <div class="modal-body">
+        <p class="body">{{post.body}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 <!-- <div class="post">
   <h1 class="title">{{citypost.title}}</h1>
   <div class="post-info">
@@ -71,26 +101,4 @@
 
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen-lg-down" class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="title" id="exampleModalLabel">{{post.title}}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="post-info">
-            <img src="https://api.minimalavatars.com/avatar/{{post.author}}/png" alt="avatar" class="user-avatar">
-            <h3 class="author">{{post.author}}</h3>
-            <h3 class="date">{{post.date}}</h3>
-        </div>
-        <hr>
-        <p class="body">{{post.body}}</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-      </div>
-    </div>
-  </div>
-</div>
+
