@@ -1,6 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AbstractControl, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { CitiesService } from '../cities/cities.service';
 import { DatePipe } from '@angular/common'
 import { PostdataService } from '../postdata.service';
@@ -28,7 +28,7 @@ export class FormComponent implements OnInit {
   posts = this.postDataService.getAllPosts();
   form : FormGroup = new FormGroup ({
     id: new FormControl(''),
-    title: new FormControl(''),
+    title: new FormControl('', Validators.required),
     author: new FormControl(''),
     body: new FormControl(''),
     date: new FormControl(''),
