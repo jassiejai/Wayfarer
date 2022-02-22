@@ -2,8 +2,8 @@ import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AbstractControl, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { CitiesService } from '../cities/cities.service';
-import { Validators } from '@angular/forms';
-import { createPostfix } from 'typescript';
+import { DatePipe } from '@angular/common'
+
 
 @Component({
   selector: 'app-form',
@@ -20,40 +20,38 @@ import { createPostfix } from 'typescript';
 export class FormComponent implements OnInit {
 
 
-  // title;
   date : Date = new Date();
-
-
-
-
-
-  // form : FormGroup = new FormGroup ({
-
-  //   title: new FormControl(null),
-  //   author: new FormControl(null),
-  //   body: new FormControl(null)
-
-  // })
+  currentDateTime = this.datePipe.transform((new Date), 'MM/dd/yyyy h:mm:ss');
   form : FormGroup = new FormGroup ({
 
-    title: new FormControl(null),
-    author: new FormControl(null),
-    body: new FormControl(null)
-
+    title: new FormControl(''),
+    author: new FormControl(''),
+    body: new FormControl(''),
+  
+    
   })
 clickedIt = false;
 
-  constructor( private route: ActivatedRoute, private citiesService: CitiesService) { }
+  constructor( private route: ActivatedRoute, private formBuild: FormBuilder, private citiesService: CitiesService, private datePipe:DatePipe) { 
+    
+
   
+  }
 
-  // posted = this.citiesService.getCityId();
-  // pForm : FormGroup;
+  ngOnInit(): void {
+    console.log(this.currentDateTime);
+    console.log(this.date);
+    throw new Error('Method not implemented.');
+    
+  }
 
-  // get inf(): {[key: string] : AbstractControl}{
-  //   return this.form.controls;
-  // };
 
-  // auto create id for each new item 
+  postForm = this.formBuild.group({
+    title: ['',],
+    author: '',
+    body: '', 
+    date: this.date
+  });
 
   onSubmit(): void{
 
@@ -69,20 +67,5 @@ clickedIt = false;
     this.clickedIt = false;
     this.form.reset();
   }
-
-  
-  ngOnInit(): void {
-    // throw new Error('Method not implemented.');
-    // this.pForm = this.fBuild.group({
-    //   title: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(200)]],
-    //   author: ['', Validators.required],
-    //   body: ['', Validators.required]
-    // });
-
-    
-  
-
-  }
-
 
 }

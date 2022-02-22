@@ -4,7 +4,11 @@ import { HttpClient } from '@angular/common/http';
 
 import { CITIES } from '../cities';
 import { CitiesService } from './cities.service';
+<<<<<<< HEAD
 
+=======
+import { PostdataService } from '../postdata.service';
+>>>>>>> 3048429c17e6713373182f1a27508aa7d43ed242
 @Component({
   selector: 'app-cities',
   templateUrl: './cities.component.html',
@@ -14,12 +18,13 @@ export class CitiesComponent implements OnInit {
 
   city: any;
   weather: any;
-  // posts: any;
+  posts = this.postDataService.getAllPosts();
+  citypost: any;
 
-  constructor(private route: ActivatedRoute, private citiesService : CitiesService, private http: HttpClient) { }
+  constructor(private route: ActivatedRoute, private citiesService : CitiesService, private http: HttpClient, private postDataService: PostdataService) { }
 
   get sortPosts(){
-        return this.city.posts.sort((a:any,b:any) => {
+        return this.citypost.sort((a:any,b:any) => {
           return <any>new Date(b.date) - <any>new Date(a.date);
         });
       }
@@ -46,13 +51,22 @@ export class CitiesComponent implements OnInit {
         
         return city.id === parseInt(paramId);
       })
-    })
-    console.log(this.city.posts)
-    for (let j = 0; j < this.city.posts.length; j++){
-      console.log(this.city.posts[j].title)
-        // if (event.originalTarget.innerHTML==CITIES[i].posts[j].title){
-        //   this.router.navigate(['cities/',CITIES[i].id,'post',CITIES[i].posts[j].id]);
-        
+    });
+    this.route.paramMap.subscribe(params => {
+      this.citypost = this.posts.find((post: any) => {
+        console.log(post);
+        let paramId: string = params.get('id') || '';
+        console.log(paramId);
+        console.log("city id: " + post[0].cityId);
+        if (post[0].cityId === parseInt(paramId)) {
+          console.log(post[0].cityId)
+          console.log(paramId)   
       }
+      console.log(post[0].cityId === parseInt(paramId))
+      return post[0].cityId === parseInt(paramId)
+    });
+  });
+  console.log(this.citypost)
+  
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CITIES } from '../cities';
 import { ActivatedRoute, Router } from '@angular/router';
+import { PostdataService } from '../postdata.service';
 
 
 @Component({
@@ -12,35 +13,55 @@ export class SearchComponent implements OnInit {
 
   postTitles: string[] = [];
   cities: any;
-  posts: any;
- 
+  postResult: any;
+  posts = this.postDataService.getAllPosts();
     public searchText: string = '';
     
 
-    constructor(private route: ActivatedRoute, private router: Router) { }
+    constructor(private route: ActivatedRoute, private router: Router, private postDataService: PostdataService) { }
 
   ngOnInit(): void {
     // Gets all the post titles and puts them in an array for the menu list
-      for(let i = 0; i < CITIES.length; i++){
-        for (let j = 0; j <CITIES[i].posts.length; j++){
-          this.postTitles.push(CITIES[i].posts[j].title);
-        }
-      }
+      // for(let i = 0; i < CITIES.length; i++){
+      //   for (let j = 0; j <CITIES[i].posts.length; j++){
+      //     this.postTitles.push(CITIES[i].posts[j].title);
+      //   }
+      // }
+
+      // Gets all the post titles from post service and puts them in an array for the search list
+      this.posts.forEach((p) => {
+        p.forEach((post: any) =>{     
+          this.postTitles.push(post.title)
+        })
+      });
+      console.log(this.postTitles)
       
   }
   // Compares the innerHTML title to the city.post title, if match is found then pull the city id and post id and route
   onChange(event: any){
     console.log(event)
     // Using the cities.ts array
-    for(let i = 0; i < CITIES.length; i++){
-      console.log(CITIES[i].posts);
-      for (let j = 0; j < CITIES[i].posts.length; j++){
-        console.log(CITIES[i].posts[j].title)
-          if (event.originalTarget.innerHTML==CITIES[i].posts[j].title){
-            this.router.navigate(['cities/',CITIES[i].id,'post',CITIES[i].posts[j].id]);
+    // for(let i = 0; i < CITIES.length; i++){
+    //   console.log(CITIES[i].posts);
+    //   for (let j = 0; j < CITIES[i].posts.length; j++){
+    //     console.log(CITIES[i].posts[j].title)
+    //       if (event.originalTarget.innerHTML==CITIES[i].posts[j].title){
+    //         this.router.navigate(['cities/',CITIES[i].id,'post',CITIES[i].posts[j].id]);
+    //     }
+    //   }
+    // }
+    // CITIES.forEach(city =>{
+    //   console.log(city.name +" : " + city.id)
+    // })
+    // Pulling directly from the post service and routing with post id and city id
+    this.posts.forEach((p) => {
+      p.forEach((post: any) =>{     
+        console.log(post)
+        if(post.title === event.originalTarget.innerHTML) {
+          this.router.navigate(['cities/',post.cityId,'post',post.id]);
         }
-      }
-    }
+      })
+    });
   }
   // Clears search bar after a selection is made
   clearSearch() {
