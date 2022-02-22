@@ -30,9 +30,9 @@ export class SearchComponent implements OnInit {
 
       // Gets all the post titles from post service and puts them in an array for the search list
       this.posts.forEach((p) => {
-        p.forEach((post: any) =>{     
-          this.postTitles.push(post.title)
-        })
+            
+          this.postTitles.push(p.title)
+        
       });
       console.log(this.postTitles)
       
@@ -55,12 +55,12 @@ export class SearchComponent implements OnInit {
     // })
     // Pulling directly from the post service and routing with post id and city id
     this.posts.forEach((p) => {
-      p.forEach((post: any) =>{     
-        console.log(post)
-        if(post.title === event.originalTarget.innerHTML) {
-          this.router.navigate(['cities/',post.cityId,'post',post.id]);
+         
+        console.log(p)
+        if(p.title === event.originalTarget.innerHTML) {
+          this.router.navigate(['cities/',p.cityId,'post',p.id]);
         }
-      })
+      
     });
   }
   // Clears search bar after a selection is made

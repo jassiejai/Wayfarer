@@ -19,7 +19,9 @@ export class PostComponent implements OnInit {
   city: any;
   post: any;
   posts = this.postDataService.getAllPosts();
-  citypost: any;
+  citypost: any[] = [];
+  // date: Date = new Date();
+  
 
 
 constructor( private route: ActivatedRoute, private citiesService: CitiesService, private postDataService: PostdataService) { }
@@ -35,10 +37,19 @@ ngOnInit(): void {
       return c.id === parseInt(paramId);
     })
 
-    this.citypost = this.posts.find((post: any) => {
-    return post[0].cityId === this.city.id;
-    });
+
+
+    this.posts.forEach((post: any)  => {
+      console.log(post)
+        if(post.cityId === this.city.id) {
+          console.log(post)
+          this.citypost.push(post);
+
+        }
+     
+      });
     
+    console.log(this.citypost)
     this.citypost.forEach((post: any) =>{
       if(post.id === postId) {
         this.post = post;
