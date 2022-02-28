@@ -22,8 +22,16 @@
 10. A post's content must not be empty.
 11. Call [Open Weather API](https://openweathermap.org/current) for each city to display the current weather on each city's page.
 
-## Sprints in order 
+## Sprints in order
+
+
 1: Landing Page
+
+
 2: HomePage
+
+
 3: Validations
+
+
 4: Weather API
